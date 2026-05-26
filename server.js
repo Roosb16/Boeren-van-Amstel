@@ -10,13 +10,23 @@ const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb')
 // APP
 // =======================
 const app = express()
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 4000
+
+app.set('view engine', 'ejs')
 
 // =======================
 // MIDDLEWARE
 // =======================
 app.use(express.json())
 app.use(express.static('public'))
+
+// =======================
+// ROUTES
+// =======================
+
+app.get('/', (req, res) => {
+  res.render('index')
+})
 
 // =======================
 // DATABASE
@@ -31,21 +41,23 @@ const client = new MongoClient(uri, {
   }
 })
 
+let db = null
+
 // =======================
 // START SERVER
 // =======================
 async function start() {
-    try {
-      await client.connect()
-      console.log('Database verbonden')
-  
-      app.listen(PORT, () => {
-        console.log(`Server draait op http://localhost:${PORT}`)
-      })
-    } catch (err) {
-      console.error('Database fout:', err)
-      process.exit(1)
-    }
+  try {
+    await client.connect()
+    db = client.db(process.env.DB_NAME)
+    console.log('Database verbonden')
+  } catch (err) {
+    console.warn('Database niet beschikbaar, server draait zonder database:', err.message)
   }
-  
+
+  app.listen(PORT, () => {
+    console.log(`Server draait op http://localhost:${PORT}`)
+  })
+}
+
 start()
