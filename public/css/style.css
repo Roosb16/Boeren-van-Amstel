@@ -1,0 +1,48 @@
+:root {
+    /* core colors */
+    /* color-scheme: light dark; */
+    --clr-primary: #1E3881;
+    --clr-overlay: #DDEEFA;
+    --clr-text: #2D2D2D;
+    --clr-secundary: #1686CE;
+    --clr-basic: #FFFFFF;
+}
+  
+/* font */
+@font-face {
+    font-family: 'amplify';
+    src: url(../font/amplify/Amplify.ttf) format('woff2');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'bjorn';
+    src: url(../font/bjron/Bjorn-Light.otf) format('woff2');
+    font-weight: 200;
+}
+@font-face {
+    font-family: 'bjorn';
+    src: url(../font/bjron/Bjorn-Regular.otf) format('woff2');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'bjorn';
+    src: url(../font/bjron/Bjorn-Halftone.otf) format('woff2');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'roboto';
+    src: url(../font/roboto/Roboto-Light.ttf) format('woff2');
+    font-weight: 200;
+}
+@font-face {
+    font-family: 'roboto';
+    src: url(../font/roboto/Roboto-Regular.ttf) format('woff2');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'roboto';
+    src: url(../font/roboto/Roboto-Medium.ttf) format('woff2');
+    font-weight: 500;
+}
