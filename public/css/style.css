@@ -58,18 +58,8 @@
 }
 
 /* button filter */
-#openFilterBtn{
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: .5rem;
-    border-radius: .5rem;
-    display: flex;
-    align-items: center;
-    transition: background 0.15s;
-}
-
-#openInstellingenBtn{
+#openFilterBtn,
+#openInstellingenBtn {
     background: none;
     border: none;
     cursor: pointer;
