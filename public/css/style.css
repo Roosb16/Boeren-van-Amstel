@@ -46,3 +46,48 @@
     src: url(../font/roboto/Roboto-Medium.ttf) format('woff2');
     font-weight: 500;
 }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+/* button filter */
+#openFilterBtn{
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: .5rem;
+    border-radius: .5rem;
+    display: flex;
+    align-items: center;
+    transition: background 0.15s;
+}
+
+#openInstellingenBtn{
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: .5rem;
+    border-radius: .5rem;
+    display: flex;
+    align-items: center;
+    transition: background 0.15s;
+}
+
+#openFilterBtn:hover svg{
+    fill: var(--clr-basic);
+}
+
+.filter-instellingen{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--clr-primary);
+    padding: 24px .55rem;
+}
