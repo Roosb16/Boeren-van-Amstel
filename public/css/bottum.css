@@ -1,33 +1,26 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-	list-style: none;
-}
-
 nav {
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
-}
 
-nav div {
     background-color: #1E3881;
-    height: 4em;
     color: white;
     display: flex;
     flex-direction: row;
-    max-width: 100%;
     justify-content: space-around;
+
+    padding: .5rem .2rem;
 }
 
-nav img {
-    color: white;
+nav svg {
+    fill: white;
 }
 
-nav p {
-    font-size: .6em;
+nav h2 {
+    font-size: .8rem;
+    font-family: roboto;
+    font-weight: 400;
 }
 
 .onderdelen-footer {
@@ -37,9 +30,9 @@ nav p {
     align-items: center;
 }
 
-.onderdelen-footer img {
-    width: 2em;
+.onderdelen-footer svg {
+    width: 2.2rem;
     height: auto;
-    margin: .1em;
+    margin: .2em;
     order: -1;
 }
