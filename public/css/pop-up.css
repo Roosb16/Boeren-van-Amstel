@@ -1,0 +1,71 @@
+section {
+    background-color: #DDEEFA;
+    width: 90vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.pop {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 1em;
+}
+
+iframe {
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    border: none;
+    border-radius: 12px;
+}
+
+a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0.6em 1.2em;
+    background-color: #1E3881;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+
+    width: fit-content;
+}
+
+.plaatjes {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+.titel {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    color: #1E3881;
+}
+
+.titel svg {
+    order: -1;
+    margin-left: 3em;
+    fill: #1E3881;
+}
+
+.titel p {
+    justify-self: end; 
+    font-size: 2em;
+    margin-right: .5em;
+
+}
+
+h2 {
+    font-size: 1.4em;
+    color: #1686CE;
+}
