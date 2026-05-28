@@ -1,0 +1,94 @@
+section {
+    background-color: #DDEEFA;
+    width: 90vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.pop {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 1em;
+}
+
+.kaartje {
+    background-color: white;
+    border-radius: 10px;
+    padding: 1em;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.kaartje h2 {
+    margin-bottom: .5em;
+    font-size: 1.5em;
+}
+
+.kaartje img {
+    max-width: 100%;
+}
+
+.kaartje p {
+    margin-top: .4em;
+
+}
+
+.kaartje svg {
+    display: block;
+    margin-left: auto;
+}
+
+img {
+    border-radius: 10px;
+}
+
+a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0.6em 1.2em;
+    background-color: #1E3881;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+
+    width: fit-content;
+}
+
+.plaatjes {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+.titel {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    color: #1E3881;
+}
+
+.titel h1 {
+    grid-column: 2;
+    grid-row: 1;
+    transform: translateX(-1.5em);
+}
+
+.titel svg:nth-of-type(1) {
+    grid-column: 1;
+    fill: #1E3881;
+    margin-right: 1em;
+    transform: translateX(-3em);
+}
+
+.titel svg:nth-of-type(2) {
+    grid-column: 3;
+}
+
+h2 {
+    font-size: 1.4em;
+    color: #1686CE;
+}
