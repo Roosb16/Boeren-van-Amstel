@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <%- include('partials/head') %>
+        <link rel="stylesheet" href="/css/onboarding.css">
+</head>
+
+<body>
+    <div class="screen">
+
+        <div class="carousel-viewport">
+          <div class="carousel-track" id="track">
+            <section class="slide">
+              <h2>Ontdek wie de boeren van Amstel zijn</h2>
+              <p>Hier komt dan een stukje tekst waarin woorden staat die je kan lezen.</p>
+              <img src="/img/mock-up.png" alt="Hier komt de mascotte">
+            </section>
+            <section class="slide">
+              <h2>Draag bij aan een betere polder</h2>
+              <p>Hier komt dan een stukje tekst waarin woorden staat die je kan lezen.</p>
+              <img src="/img/mock-up.png" alt="Hier komt de mascotte">
+            </section>
+            <section class="slide">
+              <h2>Ga op stap langs de boerderijen</h2>
+              <p>Hier komt dan een stukje tekst waarin woorden staat die je kan lezen.</p>
+              <img src="/img/mock-up.png" alt="Hier komt de mascotte">
+            </section>
+          </div>
+        </div>
+      
+        <!-- Statisch onderaan, beweegt niet mee -->
+        <div class="controls">
+          <button class="btn-next">Volgende</button>
+          <button class="btn-start" hidden>Beginnen</button>
+          
+          <div class="dots">
+            <button class="dot active" data-index="0"></button>
+            <button class="dot" data-index="1"></button>
+            <button class="dot" data-index="2"></button>
+          </div>
+        </div>
+      
+      </div>
+</body>
+<script src="/js/onboarding.js"></script>
+
+</html>
