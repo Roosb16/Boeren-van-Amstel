@@ -1,0 +1,116 @@
+/* start pagina */
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+h1{
+    font-family: bjorn;
+    font-weight: 300;
+    color: var(--clr-primary);
+    font-size: 3rem;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+p{
+    font-family: roboto;
+    font-size: 1rem;
+    font-weight: 200;
+    text-align: center;
+    width: 80vw;
+    color: var(--clr-text);
+    margin: .5rem 0;
+}
+
+img{
+    margin: 2rem 0;
+}
+
+.begin{
+    background-color: var(--clr-primary);
+    border-radius: .5rem;
+    color: var(--clr-basic);
+    font-size: 1rem;
+    font-family: roboto;
+    padding: .6rem 3rem;
+    margin: .5rem 0;
+    text-decoration: none;
+}
+
+a{
+    font-family: 'roboto';
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--clr-primary);
+    text-decoration: underline;
+    margin: .5rem 0;
+}
+
+/* onboarding slider */
+h2{
+    font-family: bjorn;
+    font-weight: 300;
+    font-size: 1.6rem;
+    text-align: center;
+    color: var(--clr-primary);
+}
+
+.screen {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+  
+.carousel-viewport {
+    flex: 1;           /* neemt alle ruimte behalve de controls */
+    overflow: hidden;
+}
+  
+.carousel-track {
+    display: flex;
+    height: 100%;
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: transform;
+}
+  
+.slide {
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 2rem;
+    height: 90vh;
+}
+
+.slide img{
+    order: -1;
+}
+  
+.controls {
+    padding: 1.6 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 5rem;
+}
+
+.dot {
+    width: 1.4rem;
+    height: 1.4rem;
+    border-radius: 2rem;
+    background: #d0d0d0;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: background 0.3s, width 0.3s;
+}
+  
+.dot.active {
+    background: #5ba3d9;
+    width: 3rem;
+}

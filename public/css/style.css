@@ -57,19 +57,20 @@
   list-style: none;
 }
 
-/* button filter */
-#openFilterBtn{
-    background: none;
+button{
+    background-color: var(--clr-primary);
     border: none;
-    cursor: pointer;
-    padding: .5rem;
     border-radius: .5rem;
-    display: flex;
-    align-items: center;
-    transition: background 0.15s;
+    color: var(--clr-basic);
+    font-size: 1rem;
+    font-family: roboto;
+    padding: .6rem 3rem;
+    margin: .5rem 0;
 }
 
-#openInstellingenBtn{
+/* button filter */
+#openFilterBtn,
+#openInstellingenBtn {
     background: none;
     border: none;
     cursor: pointer;
