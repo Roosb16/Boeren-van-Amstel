@@ -23,10 +23,17 @@ nav p {
     font-weight: 400;
 }
 
-.onderdelen-footer {
+.onderdelen-footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.onderdelen-footer li{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 

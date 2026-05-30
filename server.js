@@ -27,6 +27,14 @@ app.use(express.static('public'))
 app.get('/', (req, res) => {
   res.render('index')
 })
+
+app.get('/start', (req, res) => {
+  res.render('start')
+})
+
+app.get('/onboarding', (req, res) => {
+  res.render('onboarding');
+});
  
 // =======================
 // ROUTES
