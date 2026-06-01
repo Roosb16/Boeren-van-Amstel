@@ -8,13 +8,6 @@
     border-radius: 10px;
 }
 
-.pop {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-    padding: 1em;
-}
-
 iframe {
     max-width: 100%;
     aspect-ratio: 16 / 9;
@@ -23,13 +16,13 @@ iframe {
     border-radius: 12px;
 }
 
-a {
+.button {
     display: inline-flex;
     justify-content: center;
     align-items: center;
 
     padding: 0.6em 1.2em;
-    background-color: #1E3881;
+    background-color: var(--clr-primary);
     color: white;
     text-decoration: none;
     border-radius: 6px;
@@ -49,13 +42,13 @@ a {
     grid-template-rows: 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
-    color: #1E3881;
+    color: var(--clr-primary);
 }
 
 .titel svg {
     order: -1;
     margin-left: 3em;
-    fill: #1E3881;
+    fill: var(--clr-primary);
 }
 
 .titel p {
@@ -67,5 +60,5 @@ a {
 
 h2 {
     font-size: 1.4em;
-    color: #1686CE;
+    color: var(--clr-secondary);
 }

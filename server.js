@@ -25,11 +25,11 @@ app.use(express.static('public'))
 // =======================
  
 app.get('/', (req, res) => {
-  res.render('index')
+  res.render('start')
 })
 
-app.get('/start', (req, res) => {
-  res.render('start')
+app.get('/boeren-van-amstel', (req, res) => {
+  res.render('index')
 })
 
 app.get('/onboarding', (req, res) => {
@@ -39,14 +39,6 @@ app.get('/onboarding', (req, res) => {
 app.get('/polders', (req, res) => {
   res.render('polders');
 });
- 
-// =======================
-// ROUTES
-// =======================
-
-app.get('/', (req, res) => {
-  res.render('index')
-})
 
 // =======================
 // DATABASE

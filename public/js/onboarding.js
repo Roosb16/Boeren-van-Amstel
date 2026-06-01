@@ -18,7 +18,7 @@ function goTo(index) {
 }
 
 btnNext.addEventListener('click', () => goTo(current + 1));
-btnStart.addEventListener('click', () => window.location.href = '/');
+btnStart.addEventListener('click', () => window.location.href = '/polders');
 
 document.querySelectorAll('.dot').forEach(dot => {
   dot.addEventListener('click', () => goTo(Number(dot.dataset.index)));
