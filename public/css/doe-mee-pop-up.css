@@ -1,4 +1,4 @@
-section {
+.doe-mee {
     background-color: #DDEEFA;
     width: 90vw;
     height: auto;
@@ -16,7 +16,7 @@ section {
 }
 
 .kaartje {
-    background-color: white;
+    background-color: var(--clr-basic);
     border-radius: 10px;
     padding: 1em;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
@@ -45,20 +45,6 @@ img {
     border-radius: 10px;
 }
 
-a {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-
-    padding: 0.6em 1.2em;
-    background-color: #1E3881;
-    color: white;
-    text-decoration: none;
-    border-radius: 6px;
-
-    width: fit-content;
-}
-
 .plaatjes {
     display: flex;
     flex-direction: row;
@@ -68,7 +54,6 @@ a {
 .titel {
     display: grid;
     grid-template-columns: auto 1fr auto;
-    color: #1E3881;
 }
 
 .titel h1 {
@@ -79,16 +64,11 @@ a {
 
 .titel svg:nth-of-type(1) {
     grid-column: 1;
-    fill: #1E3881;
+    fill: var(--clr-primary);
     margin-right: 1em;
     transform: translateX(-3em);
 }
 
 .titel svg:nth-of-type(2) {
     grid-column: 3;
-}
-
-h2 {
-    font-size: 1.4em;
-    color: #1686CE;
 }
