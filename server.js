@@ -35,6 +35,10 @@ app.get('/start', (req, res) => {
 app.get('/onboarding', (req, res) => {
   res.render('onboarding');
 });
+
+app.get('/polders', (req, res) => {
+  res.render('polders');
+});
  
 // =======================
 // ROUTES
