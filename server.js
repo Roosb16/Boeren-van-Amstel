@@ -40,6 +40,10 @@ app.get('/polders', (req, res) => {
   res.render('polders');
 });
 
+app.get('/profiel', (req, res) => {
+  res.render('profiel');
+});
+
 // =======================
 // DATABASE
 // =======================

@@ -60,6 +60,9 @@ img {
     grid-column: 2;
     grid-row: 1;
     transform: translateX(-1.5em);
+    font-family: bjorn;
+    font-size: 1.6rem;
+    font-weight: 300;
 }
 
 .titel svg:nth-of-type(1) {
