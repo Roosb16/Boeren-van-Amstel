@@ -5,7 +5,7 @@ nav {
     width: 100%;
 
     background-color: #1E3881;
-    color: white;
+    color: var(--clr-basic);
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -14,13 +14,14 @@ nav {
 }
 
 nav svg {
-    fill: white;
+    fill: var(--clr-basic);
 }
 
 nav p {
     font-size: .8rem;
     font-family: roboto;
     font-weight: 400;
+    color: var(--clr-basic);
 }
 
 .onderdelen-footer{
@@ -31,7 +32,7 @@ nav p {
     width: 100%;
 }
 
-.onderdelen-footer li{
+.onderdelen-footer a{
     display: flex;
     flex-direction: column;
     align-items: center;
