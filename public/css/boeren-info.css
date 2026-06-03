@@ -1,0 +1,48 @@
+.boeren-info {
+    background-color: #DCDFF3;
+    width: 90vw;
+    height: auto;
+    justify-self: center;
+    align-self: center;
+    border-radius: 10px;
+    height: 76vh;
+    margin: 1em;
+}
+
+.boeren-info h1 {
+    font-size: 1.4em;
+}
+
+.titel-boeren-info {
+    display: flex;
+    flex-direction: row;
+    color: var(--clr-primary);
+    margin-top: 1em;
+}
+
+.titel-boeren-info svg {
+    fill: var(--clr-primary);
+}
+
+.boeren-info img {
+    object-fit: cover;
+    height: 15vh;
+    width: 80vw;
+}
+
+.boeren-info p {
+    width: 80vw;
+    font-size: .9em;
+}
+
+.boeren-info h2 {
+    font-size: 1.2em;
+    color: var(--clr-primary);
+}
+
+.boeren-info-inhoud {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .8em;
+}
