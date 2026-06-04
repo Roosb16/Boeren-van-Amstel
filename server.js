@@ -2,10 +2,10 @@
 // IMPORTS
 // =======================
 require('dotenv').config()
- 
+
 const express = require('express')
 const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb')
- 
+
 // =======================
 // APP
 // =======================
@@ -19,11 +19,11 @@ app.set('view engine', 'ejs')
 // =======================
 app.use(express.json())
 app.use(express.static('public'))
- 
+
 // =======================
 // ROUTES
 // =======================
- 
+
 app.get('/', (req, res) => {
   res.render('start')
 })
@@ -40,11 +40,15 @@ app.get('/polders', (req, res) => {
   res.render('polders');
 });
 
+app.get('/natuurherstel', (req, res) => {
+  res.render('natuurherstel');
+});
+
 // =======================
 // DATABASE
 // =======================
 const uri = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@${process.env.DB_HOST}/${process.env.DB_NAME}?retryWrites=true&w=majority`
- 
+
 const client = new MongoClient(uri, {
   serverApi: {
     version: ServerApiVersion.v1,
@@ -52,9 +56,9 @@ const client = new MongoClient(uri, {
     deprecationErrors: true,
   }
 })
- 
+
 let db = null
- 
+
 // =======================
 // START SERVER
 // =======================
@@ -73,3 +77,5 @@ async function start() {
 }
 
 start()
+
+ 

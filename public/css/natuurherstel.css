@@ -1,0 +1,59 @@
+.natuurherstel {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 90vw;
+    align-self: center;
+    justify-self: center;
+    gap: 1em;
+    margin-top: 5em;
+}
+
+.natuurherstel h1 {
+    color: var(--clr-primary);
+    font-family: bjorn;
+}
+
+.natuurherstel h2 {
+    color: var(--clr-tertiary);
+    font-family: amplify;
+    font-size: 2.4em;
+    font-weight: 150;
+}
+
+.opsomming li {
+    list-style-type: disc;
+    margin-left: 1.5em;
+    font-family: roboto;
+    font-weight: 200;
+    line-height: 1.5;
+}
+
+p {
+    font-family: roboto;
+    font-weight: 200;
+    line-height: 1.5;
+}
+
+.koop {
+    font-family: 'bjorn';
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--clr-basic);
+    text-decoration: underline;
+    margin: .5rem 0;
+    background-color: #1E3881;
+    text-decoration: none;
+    width: 40vw;
+    height: 4vh;
+
+    display: flex;
+    justify-content: center; /* horizontaal */
+    align-items: center;  
+
+    border-radius: 20px;
+}
+
+.foot {
+    margin-top: 5em;
+}
