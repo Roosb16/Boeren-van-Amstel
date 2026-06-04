@@ -44,6 +44,10 @@ app.get('/natuurherstel', (req, res) => {
   res.render('natuurherstel');
 });
 
+app.get('/agenda', (req, res) => {
+  res.render('agenda-pagina');
+});
+
 // =======================
 // DATABASE
 // =======================

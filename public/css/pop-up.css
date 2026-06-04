@@ -1,64 +1,101 @@
-.impact {
-    background-color: #DDEEFA;
-    width: 90vw;
-    height: 90vh;
+.natuurherstel {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 10px;
-}
-
-iframe {
-    max-width: 100%;
-    aspect-ratio: 16 / 9;
-    height: auto;
-    border: none;
-    border-radius: 12px;
-}
-
-.button {
-    display: inline-flex;
     justify-content: center;
-    align-items: center;
-
-    padding: 0.6em 1.2em;
-    background-color: var(--clr-primary);
-    color: white;
-    text-decoration: none;
-    border-radius: 6px;
-
-    width: fit-content;
+    flex-direction: column;
+    width: 90vw;
+    align-self: center;
+    justify-self: center;
+    gap: 1em;
+    margin-top: 5em;
 }
 
-.plaatjes {
+.kruis-natuurherstel {
     display: flex;
     flex-direction: row;
-    gap: 1em;
 }
 
-.titel {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
+.kruis-natuurherstel svg {
+    width: 50px;
+}
+
+.achtergrond1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    margin-top: 5em;
+    z-index: -1;
+}
+
+.achtergrond2 {
+    width: 111.3%;
+    height: auto;
+    left: 0;
+    right: 0;
+    display: block;
+    margin-left: -1.3em;
+}
+
+img {
+    position: relative;
+    z-index: -1;
+}
+
+.eerste-p {
+    position: relative;
+    color: var(--clr-basic);
+}
+
+.natuurherstel h1 {
+    color: var(--clr-primary);
+    font-family: bjorn;
+    position: relative;
+    color: var(--clr-basic);
+    font-size: 2.2em;
+    font-weight: 500;
+}
+
+.natuurherstel h2 {
+    color: var(--clr-tertiary);
+    font-family: amplify;
+    font-size: 2.4em;
+    font-weight: 100;
+    position: relative;
+    color: var(--clr-basic);
+}
+
+.natuurherstel h2:nth-of-type(3) {
     color: var(--clr-primary);
 }
 
-.titel svg {
-    order: -1;
-    margin-left: 3em;
-    fill: var(--clr-primary);
+p {
+    font-family: roboto;
+    font-weight: 200;
+    line-height: 1.5;
 }
 
-.titel p {
-    justify-self: end; 
-    font-size: 2em;
-    margin-right: .5em;
+.koop {
+    font-family: 'bjorn';
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--clr-basic);
+    text-decoration: underline;
+    margin: .5rem 0;
+    background-color: #1E3881;
+    text-decoration: none;
+    width: 40vw;
+    height: 4vh;
+    position: relative;
+    margin-bottom: 4em;
 
+    display: flex;
+    justify-content: center; /* horizontaal */
+    align-items: center;  
+
+    border-radius: 20px;
 }
 
-h2 {
-    font-size: 1.4em;
-    color: var(--clr-secondary);
+.foot {
+    margin-top: 5em;
 }

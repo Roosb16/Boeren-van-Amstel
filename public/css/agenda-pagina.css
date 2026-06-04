@@ -1,0 +1,154 @@
+/* 
+
+.body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.natuurherstel {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 90vw;
+    align-self: center;
+    justify-self: center;
+    gap: 1em;
+    margin-top: 5em;
+}
+
+.natuurherstel h1 {
+    color: var(--clr-primary);
+    font-family: bjorn;
+}
+
+.agenda-titel {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: .5em;
+}
+
+.agenda-titel svg {
+    fill: #1E3881;
+}
+
+.agenda-titel h1 {
+    order: 1;
+    margin-left: -5em;
+}
+
+.agenda-titel svg:nth-of-type(2) {
+    order: 3;
+}
+
+.monthYear {
+    text-align: center;
+    font-weight: 600;
+    width: 150px;
+}
+
+.kalender {
+    width: 90vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.header button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: white;
+    color: var(--clr-text);
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+}
+
+.dagen {
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+}
+
+.dag {
+    text-align: center;
+    padding: 5px;
+    color: grey;
+}
+
+.datums {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.date {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    margin: auto;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    transition: 0.2s;
+}
+
+.date:hover,
+.date.active {
+    background-color: pink;
+    color: white;
+}
+
+.date.inactive {
+    color: grey;
+}
+
+.date.inactive:hover {
+    color: pink;
+}
+
+.losse-dagen {
+    display: grid;
+    background-color: #white;
+    padding: .3em;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 1em;
+    margin-bottom: 1em;
+    width: 80vw;
+    align-self: center;
+    justify-self: center;
+}
+
+.losse-dagen h2:nth-of-type(2) {
+    grid-row: 2;
+    margin-left: .3em;
+    color: #1E3881;     
+}
+
+.losse-dagen h2:nth-of-type(1) {
+    margin-left: .3em;
+    color: #1E3881;
+}
+
+.losse-dagen p {
+    grid-column: 2;
+    grid-row: 1 / 3;
+    align-self: center;
+    margin-left: 2em;
+} */
