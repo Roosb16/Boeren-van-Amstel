@@ -11,6 +11,7 @@ nav {
     justify-content: space-around;
 
     padding: .5rem .2rem;
+    z-index: 2;
 }
 
 nav svg {
