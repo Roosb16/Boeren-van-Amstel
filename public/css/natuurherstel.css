@@ -9,64 +9,24 @@
     margin-top: 5em;
 }
 
-.kruis-natuurherstel {
-    display: flex;
-    flex-direction: row;
-}
-
-.kruis-natuurherstel svg {
-    width: 50px;
-}
-
-.achtergrond1 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    margin-top: 5em;
-    z-index: -1;
-}
-
-.achtergrond2 {
-    width: 111.3%;
-    height: auto;
-    left: 0;
-    right: 0;
-    display: block;
-    margin-left: -1.3em;
-}
-
-img {
-    position: relative;
-    z-index: -1;
-}
-
-.eerste-p {
-    position: relative;
-    color: var(--clr-basic);
-}
-
 .natuurherstel h1 {
     color: var(--clr-primary);
     font-family: bjorn;
-    position: relative;
-    color: var(--clr-basic);
-    font-size: 2.2em;
-    font-weight: 500;
 }
 
 .natuurherstel h2 {
     color: var(--clr-tertiary);
     font-family: amplify;
     font-size: 2.4em;
-    font-weight: 100;
-    position: relative;
-    color: var(--clr-basic);
+    font-weight: 150;
 }
 
-.natuurherstel h2:nth-of-type(3) {
-    color: var(--clr-primary);
+.opsomming li {
+    list-style-type: disc;
+    margin-left: 1.5em;
+    font-family: roboto;
+    font-weight: 200;
+    line-height: 1.5;
 }
 
 p {
@@ -86,8 +46,6 @@ p {
     text-decoration: none;
     width: 40vw;
     height: 4vh;
-    position: relative;
-    margin-bottom: 4em;
 
     display: flex;
     justify-content: center; /* horizontaal */

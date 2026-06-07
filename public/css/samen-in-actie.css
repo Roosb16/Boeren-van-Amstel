@@ -1,0 +1,63 @@
+.kruis-natuurherstel {
+    display: flex;
+    flex-direction: row;
+    padding: 1em;
+}
+
+.kruis-natuurherstel svg {
+    width: 50px;
+    fill: var(--clr-primary);
+    margin-left: 4em;
+}
+
+h1 {
+    font-family: bjorn;
+    color: var(--clr-primary);
+    font-size: 2.2em;
+    font-weight: 500;
+}
+
+.intro {
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-bottom: 2em;
+}
+
+.birb {
+    position: absolute;
+    margin-left: 10em;
+    margin-top: -1.5em;
+    width: 80px;
+}
+
+.inhoud-kaartje {
+    background-color: var(--clr-secundary);
+    color: var(--clr-basic);
+    width: 95vw;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    align-self: center;
+    justify-self: center;
+    position: relative;
+    z-index: -1;
+    margin-bottom: 3em;
+}
+
+.inhoud-kaartje img {
+    z-index: 1;
+    border-radius: 10px;
+    margin-top: .3em;
+}
+
+.inhoud-kaartje svg {
+    fill: var(--clr-basic);
+    margin-left: 20em;
+}
+
+.inhoud-kaartje h2 {
+    font-family: bjorn;
+    font-weight: 300;
+    margin-bottom: .3em;
+}

@@ -2,7 +2,7 @@
 // IMPORTS
 // =======================
 require('dotenv').config()
- 
+
 const express = require('express')
 const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb')
 const session = require('express-session')
@@ -42,7 +42,7 @@ function isIngelogd(req, res, next) {
 // =======================
 // GET ROUTES
 // =======================
- 
+
 app.get('/', (req, res) => {
   res.render('start')
 })
@@ -113,7 +113,7 @@ app.post('/registreren', async (req, res) => {
 // DATABASE
 // =======================
 const uri = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@${process.env.DB_HOST}/${process.env.DB_NAME}?retryWrites=true&w=majority`
- 
+
 const client = new MongoClient(uri, {
   serverApi: {
     version: ServerApiVersion.v1,
@@ -121,9 +121,9 @@ const client = new MongoClient(uri, {
     deprecationErrors: true,
   }
 })
- 
+
 let db = null
- 
+
 // =======================
 // START SERVER
 // =======================
@@ -144,3 +144,5 @@ async function start() {
 }
 
 start()
+
+ 
