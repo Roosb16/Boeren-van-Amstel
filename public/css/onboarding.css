@@ -1,53 +1,76 @@
 /* start pagina */
-section{
+.start{
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
     height: 100vh;
+
+    margin: 0 2rem;
 }
 
-h1{
+.start h1{
     font-family: bjorn;
     font-weight: 300;
     color: var(--clr-primary);
-    font-size: 3rem;
-    text-align: center;
-    margin: 1rem 0;
+    font-size: 3rem;    
+    margin-bottom: .5rem;
 }
 
-p{
+.start .eerste{
+    order: -1;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.start p{
     font-family: roboto;
     font-size: 1rem;
     font-weight: 200;
-    text-align: center;
     width: 80vw;
     color: var(--clr-text);
     margin: .5rem 0;
 }
 
-img{
+.mascotte {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+.blur {
+    width: 11.6875rem;
+    height: 11.375rem;
+    background: #DAEDFA;
+    filter: blur(40px);
+    position: absolute; /* blur blijft op z'n plek */
+}
+  
+img {
+    position: relative; /* img komt boven de blur */
     margin: 2rem 0;
+    z-index: 1;
 }
 
 .begin{
     background-color: var(--clr-primary);
     border-radius: .5rem;
     color: var(--clr-basic);
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-family: roboto;
     padding: .6rem 3rem;
-    margin: .5rem 0;
     text-decoration: none;
+    width: fit-content;
+    margin: 0.5rem auto;
 }
 
 a{
-    font-family: 'roboto';
-    font-size: 1rem;
-    font-weight: 400;
-    color: var(--clr-primary);
     text-decoration: underline;
-    margin: .5rem 0;
+    font-family: 'roboto';
+    font-size: 1.2rem;
+    color: var(--clr-primary);
+    font-weight: 300;
+    margin: 0.5rem auto;
 }
 
 /* onboarding slider */
@@ -81,9 +104,20 @@ h2{
     min-width: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     padding: 3rem 2rem;
     height: 90vh;
+}
+
+.slide p{
+    font-family: roboto;
+    font-size: 1rem;
+    font-weight: 200;
+    width: 80vw;
+    color: var(--clr-text);
+    margin: .5rem 0;
+    text-align: center;
 }
 
 .slide img{
@@ -119,23 +153,34 @@ h2{
 .polder-btn{
     background: none;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
 }
 
+.polder-btn p{
+    font-family: bjorn;
+    font-size: 2rem;
+    color: var(--clr-primary);
+}
+
 .polder-btn img{
-    order: -1;
     width: 50%;
     margin: .5rem 0;
 }
 
 .polder{
     height:fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .polder-h1{
+    font-family: bjorn;
+    font-weight: 300;
     font-size: 1.6rem;
     margin-top: 4rem;
+    color: var(--clr-primary);
 }
 
 .overlay {
