@@ -102,3 +102,20 @@ h1{
     background-color: var(--clr-primary);
     padding: 24px .55rem;
 }
+
+/* header nav */
+.header-nav{
+    background-color: var(--clr-primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.header-nav img{
+    width: 20%;
+}
+
+.header-nav svg{
+    fill: var(--clr-basic);
+}
