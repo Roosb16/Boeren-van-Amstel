@@ -78,6 +78,11 @@ h1{
     color: var(--clr-primary);
 }
 
+p{
+    font-family: roboto;
+    font-weight: 200;
+}
+
 /* button filter */
 #openFilterBtn,
 #openInstellingenBtn {
@@ -114,8 +119,29 @@ h1{
 
 .header-nav img{
     width: 20%;
+    z-index: 4;
 }
 
 .header-nav svg{
     fill: var(--clr-basic);
+}
+
+/* pop-up style */
+.pop-up {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100dvh - 60px);
+    overflow-y: scroll;
+    overscroll-behavior: contain;
+    z-index: 100;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+
+    background-color: var(--clr-basic);
+}
+  
+.pop-up[aria-hidden="false"] {
+    transform: translateY(0);
 }

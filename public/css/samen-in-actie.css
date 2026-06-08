@@ -1,16 +1,15 @@
-.kruis-natuurherstel {
+.kruis-actie {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     padding: 1em;
 }
 
-.kruis-natuurherstel svg {
-    width: 50px;
+.kruis-actie svg {
     fill: var(--clr-primary);
-    margin-left: 4em;
 }
 
-h1 {
+h2 {
     font-family: bjorn;
     color: var(--clr-primary);
     font-size: 2.2em;
@@ -53,11 +52,14 @@ h1 {
 
 .inhoud-kaartje svg {
     fill: var(--clr-basic);
-    margin-left: 20em;
+    position: absolute;
+    right: 1rem;
 }
 
-.inhoud-kaartje h2 {
+.inhoud-kaartje h3 {
     font-family: bjorn;
     font-weight: 300;
+    font-size: 1.5rem;
     margin-bottom: .3em;
+    width: 90%;
 }
