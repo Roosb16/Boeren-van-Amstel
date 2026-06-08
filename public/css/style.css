@@ -5,8 +5,10 @@
     --clr-overlay: #DDEEFA;
     --clr-text: #2D2D2D;
     --clr-secundary: #1686CE;
+    --clr-accent: #77B9E1;
     --clr-tertiary: #77B9E1;
     --clr-basic: #FFFFFF;
+    --clr-high-light: #F9C81D;
 }
   
 /* font */
@@ -69,6 +71,13 @@ button{
     margin: .5rem 0;
 }
 
+h1{
+    font-family: bjorn;
+    font-weight: 300;
+    font-size: 2rem;
+    color: var(--clr-primary);
+}
+
 /* button filter */
 #openFilterBtn,
 #openInstellingenBtn {
@@ -92,4 +101,21 @@ button{
     justify-content: space-between;
     background-color: var(--clr-primary);
     padding: 24px .55rem;
+}
+
+/* header nav */
+.header-nav{
+    background-color: var(--clr-primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.header-nav img{
+    width: 20%;
+}
+
+.header-nav svg{
+    fill: var(--clr-basic);
 }
