@@ -63,3 +63,17 @@ nextButton.addEventListener('click', () => {
 });
 
 updateKalender();
+
+const toggles = document.querySelectorAll('.losse-dagen');
+
+toggles.forEach(btn => {
+    btn.addEventListener('click', () => {
+        toggles.forEach(item => {
+            if (item !== btn) {
+                item.classList.remove('active');
+            }
+        });
+
+        btn.classList.toggle('active');
+    });
+});
