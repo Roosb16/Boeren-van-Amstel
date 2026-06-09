@@ -1,36 +1,44 @@
-.titel-verhaal h1 {
+.kruis-verhalen {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1em;
+    fill: var(--clr-basic);
+}
+
+.kruis-verhalen svg {
+    fill: var(--clr-basic);
+    z-index: 1;
+    width: 50px;
+}
+
+.titel-verhaal h2 {
     position: relative;
     color: var(--clr-basic);
     z-index: 1;
-    padding-left: .8em;
-    padding-right: 1em;
-    margin-top: 1em;
-    margin-bottom: .3em;
 }
 
 .titel-verhaal p {
     position: relative;
     color: var(--clr-basic);
     z-index: 1;
-    padding-left: 1.8em;
-    padding-right: 1.8em;
+    padding: 0 1rem;
     margin-bottom: 6.5em;
 }
 
-.titel-verhaal svg:nth-of-type(1) {
+.titel-verhaal > svg:nth-of-type(1) {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: auto;
-    margin-top: 6.5em;
 }
 
 .button-verhalen {
     background-color: var(--clr-basic);
     color: var(--primary);
     border: 1px solid var(--clr-primary);
-    border-radius: 20px;
+    border-radius: 1.2rem;
 
     width: 8em;
     height: 2vh;
@@ -40,8 +48,7 @@
     justify-content: center;
     align-items: center;
     font-size: 1.1em;
-    margin-bottom: 1em;
-    margin-left: .7em;
+    margin: .5rem .7rem 1rem .7rem;
 }
 
 .button-svg {
@@ -51,12 +58,12 @@
 
 .verhaal-kaart {
     background-color: var(--clr-overlay);
-    border-radius: 10px;
+    border-radius: .6rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 8px;
+    gap: .5rem;
     padding: 1em;
     margin-bottom: 2em;
     z-index: 1;
@@ -66,7 +73,7 @@
     align-self: center;
 }
 
-.verhaal-kaart h2 {
+.verhaal-kaart h3 {
     font-family: amplify;
     font-weight: 200;
     color: var(--clr-secundary);
@@ -82,7 +89,7 @@ time {
 .verhaal-foto {
     display: flex;
     flex-direction: row;
-    gap: 30px;
+    gap: 1.5rem;
 }
 
 .verhaal-kaart img {
