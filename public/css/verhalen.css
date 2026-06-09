@@ -2,8 +2,9 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 1em;
+    padding: 1rem;
     fill: var(--clr-basic);
+    margin-top: 2rem;
 }
 
 .kruis-verhalen svg {
@@ -48,7 +49,7 @@
     justify-content: center;
     align-items: center;
     font-size: 1.1em;
-    margin: .5rem .7rem 1rem .7rem;
+    margin: 2rem .7rem 2rem .7rem;
 }
 
 .button-svg {
@@ -94,4 +95,8 @@ time {
 
 .verhaal-kaart img {
     z-index: 0;
+}
+
+.verhaal-kaart:nth-of-type(2) {
+    margin-bottom: 6em;
 }
