@@ -30,6 +30,13 @@ const iconen = {
     className: ''
   }),
   natuurherstel: L.divIcon({
+    html: '<img src="/img/grutto.png" width="55" height="55">',
+    iconSize: [50, 50],
+    iconAnchor: [16, 32],
+    popupAnchor: [0, -32],
+    className: ''
+  }),
+  beleving: L.divIcon({
     html: '<img src="/img/natuurherstel.png" width="55" height="55">',
     iconSize: [50, 50],
     iconAnchor: [16, 32],
@@ -41,22 +48,28 @@ const iconen = {
 // 5. Locaties
 const locaties = [
   {
-    naam: "Boerderij Langbroek",
+    naam: "Boerderij Polderzicht",
     type: "boerderij",
-    coords: [52.310, 4.938],
+    coords: [52.320, 4.946],
     beschrijving: "Melkveehouderij aan de Amsteldijk"
   },
   {
-    naam: "Kaasmakerij Amstel",
-    type: "bedrijf",
-    coords: [52.298, 4.952],
-    beschrijving: "Proeverijen en rondleidingen"
+    naam: "Uitkijk toren",
+    type: "beleving",
+    coords: [52.316, 4.960],
+    beschrijving: "Kijk over het Amstelgebied en spot vogels"
   },
   {
-    naam: "Amstelpark",
+    naam: "De voetangel",
+    type: "bedrijf",
+    coords: [52.303, 4.976],
+    beschrijving: "Restaurant met streekproducten uit het Amstelgebied"
+  },
+  {
+    naam: "Weidenvogel nesten",
     type: "natuurherstel",
-    coords: [52.305, 4.945],
-    beschrijving: "Groen park met speeltuin en tuinen"
+    coords: [52.298, 4.952],
+    beschrijving: "De weidenvogels worden beschermt en hier kunnen ze veilig broeden"
   }
 ];
  

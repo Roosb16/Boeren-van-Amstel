@@ -37,8 +37,9 @@ svg{
 .active-filters button{
     background: none;
     border: none;
-    /* padding: .3rem .8rem; */
     border-radius: .5rem;
+    margin: 0;
+    padding: 0;
 }
 
 .active-filters button svg{
@@ -72,23 +73,6 @@ svg{
     display: flex;
     align-items: center;
     transition: background 0.15s;
-}
-
-fieldset {
-    border: none;
-    padding: 0;
-    margin: .5rem;
-    margin-bottom: 1rem;
-}
-
-fieldset legend {
-    color: var(--clr-overlay);
-
-    font-size: 1.2rem;
-    font-family: bjorn;
-    font-weight: 300;
-
-    margin-bottom: .8rem;
 }
 
 .filter-option {
@@ -161,18 +145,53 @@ fieldset legend {
 /* even kijken */
 .filter-panel {
     position: fixed;
-    top: 0;
+    top: 80px;
     left: 0;
     right: 0;
     bottom: 0;
-    background: #1a3a6e;
+    background: var(--clr-primary);
     z-index: 20;
     padding: 24px 20px;
     overflow-y: auto;
     transform: translateX(-100%);
     transition: transform 0.32s cubic-bezier(0.4, 0, 0.2, 1);
+
+    opacity: 0.98;
 }
 
 .filter-panel.open {
     transform: translateX(0);
+}
+
+
+.filter-accordion__header {
+    cursor: pointer;
+    padding: .8rem;
+    font-family: bjorn;
+    font-weight: 300;
+    font-size: 1.2rem;
+    list-style: none; /* verwijdert standaard driehoekje */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    color: var(--clr-basic);
+}
+
+/* Eigen pijltje toevoegen */
+.filter-accordion__header::after {
+    content: '▼';
+    font-size: 0.75rem;
+    transition: transform 0.4s ease;
+}
+
+.filter-accordion[open] .filter-accordion__header::after {
+    transform: rotate(180deg);
+}
+
+.filter-accordion__content {
+    padding: 8px 16px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
