@@ -158,9 +158,20 @@ h2{
     align-items: start;
 }
 
+.polder-btn:nth-of-type(1) img{
+    width: 40%;
+}
+
 .polder-btn:nth-of-type(2){
     align-items: end;
-    margin-top: -5rem;
+    margin-top: -1rem;
+}
+.polder-btn:nth-of-type(2) img{
+    width: 65%;
+}
+
+.polder-btn:nth-of-type(3){
+    margin-top: -2rem;
 }
 
 .polder-btn p{
