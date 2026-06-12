@@ -14,73 +14,70 @@
     <main>
         <div class="hero">
             <svg viewBox="0 0 393 429" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M393 0H0V404.638C0 404.638 59.5 453.778 192 412.477C324.5 371.176 393 424.237 393 424.237V0Z" fill="#1686CE"/>
+                <path d="M393 0H0V319.749C0 319.749 59.5 358.58 192 325.944C324.5 293.307 393 335.236 393 335.236V0Z"
+                    fill="#1686CE" />
             </svg>
-        
+
             <div class="hero-content">
                 <h1>Jouw profiel</h1>
                 <a href="/uitloggen">uitloggen</a>
-                <p>Bekijk jouw donaties en zie welke projecten je hebt geholpen realiseren.</p>
+                <p>Bekijk je voortgang, ontdek je behaalde badges en ga verder met jouw avontuur door het Amstelland.</p>
                 <section class="profiel-container">
-                    <h2><%= gebruiker.naam %></h2>
+                    <h2>
+                        <%= gebruiker.naam %>
+                    </h2>
                     <p>Lid sinds: 21 april 2026</p>
                     <img src="/img/profiel-mockup.png" alt="Jouw profiel pagina">
                 </section>
             </div>
         </div>
 
-        <div class="profiel">
-            <section class="bijdragen">
-                <h2>Jouw bijdragen</h2>
-                <section>
-                    <h3>€ 5.02</h3>
-                    <p>Weidevogel fonds</p>
-                </section>
-                <img src="/img/eendje-zijkant.png" alt="Hier komt de mascotte">
-            </section>
-
+        <div class="zonder-achtergrond">
             <section>
-                <h2>Doneren aan natuurherstel</h2>
-                <p>Met een donatie steun je natuurherstel in het Amstelland. Zo help je boeren om meer ruimte te maken
-                    voor weidevogels, bloemen en een gezond landschap.</p>
-                <button>Doneer</button>
+                <h2>Ga verder met jouw route</h2>
+                <article class="card">
+                    <p>80% voltooid</p>
+                    <h3>Ronde hoep - 18km</h3>
+                </article>
             </section>
 
-            <section class="score-board">
-                <h2>Score board</h2>
-                <p>week 12</p>
+            <section class="badges">
+                <h2>Verdiende badges</h2>
+                <p>Tijdens je avonturen in het Amstelland kun je verschillende badges verdienen. 
+                    Voltooi routes, bezoek bijzondere locaties, beantwoord quizvragen en ontdek meer over de natuur om nieuwe badges vrij te spelen.</p>
+                    
+                <p>Verzamel ze allemaal en laat zien hoeveel van het Amstelland jij al hebt ontdekt!</p>
+                <img src="/img/badges-mockup.png" alt="Verdiende badge">
+                <img src="/img/badges-mockup.png" alt="Verdiende badge">
+                <img src="/img/badges-mockup.png" alt="Verdiende badge">
+                <img src="/img/badges-mockup.png" alt="Verdiende badge">
+                <img src="/img/badges-mockup.png" alt="Verdiende badge">
+                <button>Bekijk ze allemaal</button>
+            </section>
 
-                <div class="board">
-                    <ol>
-                        <li><span class="naam">Naam</span><span class="score">€ 11,56</span></li>
-                        <li><span class="naam">Naam</span><span class="score">€ 9,44</span></li>
-                        <li><span class="naam">Naam</span><span class="score">€ 9,32</span></li>
-                        <li><span class="naam">Naam</span><span class="score">€ 7,12</span></li>
-                        <li><span class="naam">Naam</span><span class="score">€ 7,10</span></li>
-                    </ol>
-
-                    <hr>
-
-                    <ol start="12">
-                        <li class="jij"><span class="naam">
-                                <%= gebruiker.naam %>
-                            </span><span class="score">€ 5,02</span></li>
-                    </ol>
-                </div>
+        </div>
+        <div class="album-blok">
+            <img src="/img/eendje-verrekijker.png" alt="Eendje met een verrekijker">
+            <svg viewBox="0 0 393 752" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M393 744.903C393 744.903 334 767.381 197 732.332C60 697.283 0 744.903 0 744.903V28.6287C0 28.6287 100 -30.5336 214 21.2388C328 73.0113 393 14.7515 393 14.7515V744.903Z" fill="#1686CE"/>
+            </svg>
+            <section class="polder-album">
+                <h2>Polder album</h2>
+                <p>Bewaar hier jouw mooiste herinneringen uit het Amstelland. Upload foto's van bijzondere ontmoetingen, mooie uitzichten en plekken die je tijdens je routes hebt ontdekt.</p>
+                <img src="/img/bloem.png" alt="">
+                <img src="/img/grutto-img.png" alt="">
+                <img src="/img/weiland.png" alt="">
+                <input type="image">
+                <button>Bekijk ze allemaal</button>
             </section>
         </div>
-        <div class="sdg-blok">
-            <svg viewBox="0 0 393 687" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M393 686.155H0V30.8923C0 30.8923 78 -29.1653 192 18.1971C306 65.5596 393 18.1971 393 18.1971V686.155Z" fill="#1686CE"/>
-            </svg>
-        
-            <div class="sdg-content">
+
+        <div class="zonder-achtergrond">
+            <section class="sdg-content">
                 <h2>SDG punten</h2>
-                <p>Met jouw activiteiten, aankopen en bijdragen verdien je SDG-punten. Zo zie je direct welke impact je
-                    maakt op natuurherstel, biodiversiteit en een duurzamer Amstelland. Hoe meer punten je verzamelt,
-                    hoe groter jouw positieve bijdrage.</p>
+                <p>Met jouw activiteiten, aankopen en bijdragen verdien je SDG-punten. Zo zie je direct welke impact je maakt op natuurherstel, biodiversiteit en een duurzamer Amstelland. Hoe meer punten je verzamelt, hoe groter jouw positieve bijdrage.</p>
                 <button>Bekijk alle SDG punten</button>
-        
+
                 <div class="sdg-grid">
                     <article class="sdg-13">
                         <h3>13</h3>
@@ -103,8 +100,19 @@
                         <img src="" alt="">
                     </article>
                 </div>
-            </div>
-        </div>        
+            </section>
+            <section class="algemeen-routes">
+                <h2>Al afgelegde routes</h2>
+                <article class="card">
+                    <p>100% voltooid</p>
+                    <h3>Ronde hoep - 5km</h3>
+                </article>
+                <article class="card">
+                    <p>100% voltooid</p>
+                    <h3>Ronde hoep - fiets - 18km</h3>
+                </article>
+            </section>
+        </div>
     </main>
 
     <footer>
