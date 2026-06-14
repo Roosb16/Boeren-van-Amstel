@@ -1,14 +1,24 @@
 :root {
     /* core colors */
-    /* color-scheme: light dark; */
     --clr-primary: #1E3881;
     --clr-overlay: #DDEEFA;
     --clr-text: #2D2D2D;
     --clr-secundary: #1686CE;
     --clr-accent: #77B9E1;
-    --clr-tertiary: #77B9E1;
     --clr-basic: #FFFFFF;
     --clr-high-light: #F9C81D;
+    --clr-background:#fff;
+}
+
+body.dark-mode {
+    --clr-primary: #1686CE;
+    --clr-overlay: #1686CE;
+    --clr-text: #fff;
+    --clr-secundary: #1E3881;
+    --clr-accent: #3a7fa8;
+    --clr-basic: #fff;
+    --clr-high-light: #F9C81D;
+    --clr-background:#222222;
 }
   
 /* font */
@@ -81,6 +91,7 @@ h1{
 p{
     font-family: roboto;
     font-weight: 200;
+    color: var(--clr-text);
 }
 
 /* button filter */
@@ -154,7 +165,7 @@ p{
     transform: translateY(100%);
     transition: transform 0.3s ease;
 
-    background-color: var(--clr-basic);
+    background-color: var(--clr-background);
 }
   
 .pop-up[aria-hidden="false"] {

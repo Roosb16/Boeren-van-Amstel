@@ -3,7 +3,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: var(--clr-basic);
+    background-color: var(--clr-background);
     border-radius: 1rem 1rem 0 0;
     height: 80vh;
     transform: translateY(100%);

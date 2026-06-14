@@ -55,7 +55,7 @@
     position: absolute;
     width: 1.25rem;
     height: 1.25rem;
-    background: white;
+    background: var(--clr-background);
     border-radius: 50%;
     top: 0.25rem;
     left: 0.25rem;

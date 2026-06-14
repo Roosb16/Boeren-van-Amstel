@@ -146,7 +146,7 @@ h2{
 }
   
 .dot.active {
-    background: #5ba3d9;
+    background: var(--clr-secondary);
     width: 3rem;
 }
 
