@@ -81,7 +81,7 @@ svg{
     gap: .5rem;
     padding: .4rem 0;
     cursor: pointer;
-    color: white;
+    color: var(--clr-basic);
     font-size: 1rem;
     font-family: roboto;
 }
@@ -100,8 +100,8 @@ svg{
 }
 
 .filter-option input[type="checkbox"]:checked {
-    background: #4a9eff;
-    border-color: #4a9eff;
+    background: var(--clr-secondary);
+    border-color: var(--clr-secondary);
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6L9 17l-5-5'/%3E%3C/svg%3E");
     background-size: 70%;
     background-repeat: no-repeat;
@@ -126,7 +126,7 @@ svg{
     list-style: none;
     padding: 16px;
     margin: 0;
-    background: white;
+    background: var(--clr-background);
     border-radius: 12px;
 }
 
