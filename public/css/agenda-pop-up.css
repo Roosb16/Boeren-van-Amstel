@@ -30,11 +30,11 @@
 
 .kruisje {
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     align-items: center;
     position: relative;
     z-index: 1;
-    flex-direction: row-reverse;
+    background-color: transparent;
 }
 
 .agenda-koe {
@@ -212,13 +212,6 @@
     grid-column: 2;
     align-self: center;
     padding-bottom: .5rem;
-}
-
-.kruisje {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    background-color: transparent; /* of verwijder deze regel */
 }
 
 .uitklap-tekst {

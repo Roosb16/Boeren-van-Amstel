@@ -43,11 +43,11 @@
     height: 11.375rem;
     background: #DAEDFA;
     filter: blur(40px);
-    position: absolute; /* blur blijft op z'n plek */
+    position: absolute;
 }
-  
-img {
-    position: relative; /* img komt boven de blur */
+
+.mascotte img {
+    position: relative;
     margin: 2rem 0;
     z-index: 1;
 }
@@ -64,7 +64,7 @@ img {
     margin: 0.5rem auto;
 }
 
-a{
+.start a{
     text-decoration: underline;
     font-family: 'roboto';
     font-size: 1.2rem;
@@ -74,7 +74,7 @@ a{
 }
 
 /* onboarding slider */
-h2{
+.screen h2{
     font-family: bjorn;
     font-weight: 300;
     font-size: 1.6rem;
@@ -89,7 +89,7 @@ h2{
 }
   
 .carousel-viewport {
-    flex: 1;           /* neemt alle ruimte behalve de controls */
+    flex: 1;
     overflow: hidden;
 }
   
@@ -126,7 +126,7 @@ h2{
 }
   
 .controls {
-    padding: 1.6 2rem;
+    padding: 1.6rem 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -144,9 +144,9 @@ h2{
     padding: 0;
     transition: background 0.3s, width 0.3s;
 }
-  
+
 .dot.active {
-    background: var(--clr-secondary);
+    background: var(--clr-secundary);
     width: 3rem;
 }
 
