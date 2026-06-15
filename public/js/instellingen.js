@@ -19,3 +19,10 @@ lettertype.addEventListener('input', function () {
     const groottes = { 1: '100%', 2: '125%', 3: '150%' };
     document.documentElement.style.fontSize = groottes[this.value];
 });
+
+// Dark mode
+const toggleDarkmode = document.getElementById('darkMode');
+
+toggleDarkmode.addEventListener('change', function () {
+    document.body.classList.toggle('dark-mode', this.checked);
+});

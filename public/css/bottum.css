@@ -4,7 +4,7 @@ nav {
     left: 0;
     width: 100%;
 
-    background-color: #1E3881;
+    background-color: var(--clr-primary);
     color: var(--clr-basic);
     display: flex;
     flex-direction: row;

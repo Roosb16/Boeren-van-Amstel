@@ -122,6 +122,7 @@ h2{
 
 .slide img{
     order: -1;
+    width: 100%;
 }
   
 .controls {
@@ -145,7 +146,7 @@ h2{
 }
   
 .dot.active {
-    background: #5ba3d9;
+    background: var(--clr-secondary);
     width: 3rem;
 }
 
@@ -153,19 +154,37 @@ h2{
 .polder-btn{
     background: none;
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
+    align-items: start;
+}
+
+.polder-btn:nth-of-type(1) img{
+    width: 40%;
+}
+
+.polder-btn:nth-of-type(2){
+    align-items: end;
+    margin-top: -1rem;
+}
+.polder-btn:nth-of-type(2) img{
+    width: 65%;
+}
+
+.polder-btn:nth-of-type(3){
+    margin-top: -2rem;
 }
 
 .polder-btn p{
     font-family: bjorn;
-    font-size: 2rem;
+    font-size: 1.2rem;
+    font-weight: 200;
     color: var(--clr-primary);
 }
 
 .polder-btn img{
     width: 50%;
     margin: .5rem 0;
+    order: -1;
 }
 
 .polder{
@@ -207,6 +226,7 @@ h2{
     grid-column: 1;
     grid-row: 1;
     text-align: left;
+    font-size: 1.5rem;
 }
 
 .overlay p {
@@ -218,9 +238,21 @@ h2{
 .overlay img {
     grid-column: 1 / 3;
     grid-row: 3;
+    width: 85%;
 }
 
 .overlay a {
     grid-column: 1 / 3;
     grid-row: 4;
+}
+
+.overlay--active {
+    display: flex;
+    flex-direction: column;
+}
+
+.overlay--active div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }

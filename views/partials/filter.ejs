@@ -16,25 +16,108 @@
     <!-- Active filters will be displayed here -->
     <ul class="active-filters" id="activeFilters"></ul>
 
-    <fieldset>
-        <legend>Soort locatie</legend>
-        <label class="filter-option">
-            <input type="checkbox" name="filter" value="Boerderij"> Boerderij
-        </label>
-        <label class="filter-option">
-            <input type="checkbox" name="filter" value="Bedrijven"> Bedrijven
-        </label>
-        <label class="filter-option">
-            <input type="checkbox" name="filter" value="Natuurherstel projecten"> Natuurherstel projecten
-        </label>
-        <label class="filter-option">
-            <input type="checkbox" name="filter" value="Vogelspots"> Vogelspots
-        </label>
-    </fieldset>
+    <details class="filter-accordion">
+        <summary class="filter-accordion__header">Soort locatie</summary>
+        <div class="filter-accordion__content">
+            <label class="filter-option">
+                <input type="checkbox" name="filter" value="boerderij"> Boerderij
+            </label>
+            <label class="filter-option">
+                <input type="checkbox" name="filter" value="natuurgebieden"> Natuurgebieden
+            </label>
+            <label class="filter-option">
+                <input type="checkbox" name="filter" value="verkooppunten"> Verkooppunten
+            </label>
+            <label class="filter-option">
+                <input type="checkbox" name="filter" value="vogelspots"> Vogelspots
+            </label>
+            <label class="filter-option">
+                <input type="checkbox" name="filter" value="uitkijkpunten"> Uitkijkpunten
+            </label>
+            <label class="filter-option">
+                <input type="checkbox" name="filter" value="horeca"> Horeca
+            </label>
+        </div>
+    </details>
+    <details class="filter-accordion">
+        <summary class="filter-accordion__header">Thema</summary>
+        <div class="filter-accordion__content">
+            <label class="filter-option">
+                <input type="checkbox" name="filter" value="natuurherstel"> Natuurherstel
+            </label>
+            <label class="filter-option">
+                <input type="checkbox" name="filter" value="weidevogels"> Weidevogels
+            </label>
+            <label class="filter-option">
+                <input type="checkbox" name="filter" value="biodiversiteit"> Biodiversiteit
+            </label>
+            <label class="filter-option">
+                <input type="checkbox" name="filter" value="duurzame landbouw "> Duurzame landbouw 
+            </label>
+            <label class="filter-option">
+                <input type="checkbox" name="filter" value="insecten & bestuivers"> Insecten & bestuivers
+            </label>
+            <label class="filter-option">
+                <input type="checkbox" name="filter" value="klimaatadaptatie"> Klimaatadaptatie
+            </label>
+            <label class="filter-option">
+                <input type="checkbox" name="filter" value="bodemgezondheid"> Bodemgezondheid
+            </label>
+            <label class="filter-option">
+                <input type="checkbox" name="filter" value="bloemrijke graslanden"> Bloemrijke graslanden
+            </label>
+        </div>
+    </details>
+    <details class="filter-accordion">
+        <summary class="filter-accordion__header">Activiteiten</summary>
+        <div class="filter-accordion__content">
+            <label class="filter-option">
+                <input type="checkbox" name="filter" value="rondleidingen"> Rondleidingen
+            </label>
+            <label class="filter-option">
+                <input type="checkbox" name="filter" value="excursies"> Excursies
+            </label>
+            <label class="filter-option">
+                <input type="checkbox" name="filter" value="fietsroutes"> Fietsroutes
+            </label>
+            <label class="filter-option">
+                <input type="checkbox" name="filter" value="wandelroutes"> Wandelroutes
+            </label>
+            <label class="filter-option">
+                <input type="checkbox" name="filter" value="workshops"> Workshops
+            </label>
+            <label class="filter-option">
+                <input type="checkbox" name="filter" value="proeverijen"> Proeverijen
+            </label>
+            <label class="filter-option">
+                <input type="checkbox" name="filter" value="vrijwilligerswerk"> Vrijwilligerswerk
+            </label>
+            <label class="filter-option">
+                <input type="checkbox" name="filter" value="evenementen"> Evenementen
+            </label>
+            <label class="filter-option">
+                <input type="checkbox" name="filter" value="gezinsactiviteiten"> Gezinsactiviteiten
+            </label>
+        </div>
+    </details>
+    <details class="filter-accordion">
+        <summary class="filter-accordion__header">Producten</summary>
+        <div class="filter-accordion__content">
+            <label class="filter-option">
+                <input type="checkbox" name="filter" value="kaas"> Kaas
+            </label>
+            <label class="filter-option">
+                <input type="checkbox" name="filter" value="melk"> Melk
+            </label>
+            <label class="filter-option">
+                <input type="checkbox" name="filter" value="yoghurt"> Yoghurt
+            </label>
+        </div>
+    </details>
 
     <section class="legenda">
         <h3>Legenda</h3>
-        <ul>
+        <ul> 
             <li>
                 Boerderij
             </li>

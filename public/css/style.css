@@ -1,14 +1,24 @@
 :root {
     /* core colors */
-    /* color-scheme: light dark; */
     --clr-primary: #1E3881;
     --clr-overlay: #DDEEFA;
     --clr-text: #2D2D2D;
     --clr-secundary: #1686CE;
     --clr-accent: #77B9E1;
-    --clr-tertiary: #77B9E1;
     --clr-basic: #FFFFFF;
     --clr-high-light: #F9C81D;
+    --clr-background:#fff;
+}
+
+body.dark-mode {
+    --clr-primary: #1686CE;
+    --clr-overlay: #1686CE;
+    --clr-text: #fff;
+    --clr-secundary: #1E3881;
+    --clr-accent: #3a7fa8;
+    --clr-basic: #fff;
+    --clr-high-light: #F9C81D;
+    --clr-background:#222222;
 }
   
 /* font */
@@ -81,6 +91,7 @@ h1{
 p{
     font-family: roboto;
     font-weight: 200;
+    color: var(--clr-text);
 }
 
 /* button filter */
@@ -94,6 +105,7 @@ p{
     display: flex;
     align-items: center;
     transition: background 0.15s;
+    margin: 0;
 }
 
 #openFilterBtn:hover svg{
@@ -104,8 +116,14 @@ p{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: var(--clr-primary);
-    padding: 24px .55rem;
+    background-color: var(--clr-primary); 
+    position: fixed;
+    top: 90px;
+    left: 10px;
+    right: 0;
+    z-index: 10;
+    width: fit-content;
+    border-radius: 0.5rem;
 }
 
 /* header nav */
@@ -114,11 +132,19 @@ p{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 1rem;
+    height: 5rem;
+}
+
+.header-nav div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
 }
 
 .header-nav img{
-    width: 20%;
+    width: 4rem;
     z-index: 4;
 }
 
@@ -132,14 +158,14 @@ p{
     bottom: 0;
     left: 0;
     width: 100%;
-    height: calc(100dvh - 60px);
+    height: calc(100dvh - 80px);
     overflow-y: scroll;
     overscroll-behavior: contain;
     z-index: 100;
     transform: translateY(100%);
     transition: transform 0.3s ease;
 
-    background-color: var(--clr-basic);
+    background-color: var(--clr-background);
 }
   
 .pop-up[aria-hidden="false"] {
@@ -167,4 +193,8 @@ p{
 .agenda {
     z-index: 10;
     position: relative;
+}
+
+.leaflet-top .leaflet-control {
+    margin-top: 80px !important;
 }

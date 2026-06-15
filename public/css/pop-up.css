@@ -31,6 +31,8 @@
     height: auto;
     z-index: 0;
     margin-top: 0;
+
+    fill: var(--clr-secundary);
 }
 
 .achtergrond2 {
@@ -88,7 +90,7 @@
     color: var(--clr-basic);
     text-decoration: underline;
     margin: .5rem 0;
-    background-color: #1E3881;
+    background-color: var(--clr-primary);
     text-decoration: none;
     width: 40vw;
     height: 4vh;
