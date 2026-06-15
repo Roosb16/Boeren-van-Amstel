@@ -1,0 +1,208 @@
+.kruis-verhalen {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem;
+    fill: var(--clr-basic);
+    margin-top: 2rem;
+}
+
+.kruis-verhalen svg {
+    fill: var(--clr-basic);
+    z-index: 1;
+    width: 50px;
+}
+
+.titel-verhaal h2 {
+    position: relative;
+    color: var(--clr-basic);
+    z-index: 1;
+}
+
+.titel-verhaal p {
+    position: relative;
+    color: var(--clr-basic);
+    z-index: 1;
+    padding: 0 1rem;
+    margin-bottom: 6.5em;
+}
+
+.titel-verhaal > svg:nth-of-type(1) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+}
+
+.tekst-route {
+    margin-top: 9rem;
+    margin-left: 1rem;
+}
+
+.tekst-route h3 {
+    font-family: amplify;
+    font-weight: 200;
+    font-size: 2.2em;
+    color: var(--clr-secundary);
+    margin-bottom: .5rem;
+}
+
+.carousel-route {
+  padding: 20px;
+  display: flex;
+  gap: 4vw;
+
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  margin-bottom: 2rem;
+}
+
+.carousel-item {
+  flex: 0 0 40%;
+  height: 22vh;
+  overflow: hidden; /* cruciaal: snijdt alles buiten de kaart weg */
+  border-radius: 12px;
+  position: relative;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  position: relative;
+}
+
+.carousel-item p {
+  width: 60%;
+  z-index: 1;
+  color: var(--clr-basic);
+  margin-top: 1em;
+  margin-left: .5em;
+  position: absolute;
+}
+
+.carousel-item .naam {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+
+  margin: 0;
+  color: white;
+  z-index: 2;
+}
+
+.kiekje {
+    margin-left: 1rem;
+}
+
+.delen {
+    font-family: 'bjorn';
+    font-size: 1.1em;
+    font-weight: 300;
+    color: var(--clr-basic);
+    text-decoration: underline;
+    margin: .5rem 0;
+    background-color: #1E3881; 
+    text-decoration: none;
+    width: 30vw;
+    height: 4vh;
+    position: relative;
+    margin-bottom: 3.5rem;
+    margin-top: .8rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 20px;
+}
+
+.eendje-fietsend {
+    width: 100vw;
+    margin-left: -1rem;
+    margin-top: -6rem;
+    position: absolute;
+}
+
+.info-route {
+    margin-top: 7rem;
+    position: relative;
+    color: var(--clr-basic);
+}
+
+.info-route h3 {
+    font-family: amplify;
+    font-weight: 200;
+    font-size: 2.2em;
+    margin-bottom: .5rem;
+}
+
+.button-verhalen {
+    background-color: rgb(255 255 255 / 20%);
+    color: var(--primary);
+    border: 1px solid var(--clr-basic);
+    border-radius: 1.2rem;
+
+    width: 7rem;
+    height: 2vh;
+
+    padding: .8em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1em;
+    font-weight: 200;
+    margin: 2rem .7rem 2rem .7rem;
+}
+
+.button-svg {
+    fill: var(--clr-basic);
+    width: 2em;
+    margin-left: .8rem;
+}
+
+.carousel-afstand {
+    position: relative;
+  display: flex;
+  gap: 5vw;
+
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  margin-bottom: 5rem;
+}
+
+.carousel-item-afstand {
+  flex: 0 0 60%;
+  height: 22vh;
+  border-radius: 12px;
+  position: relative;
+}
+
+.carousel-item-afstand img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 12px;
+}
+
+.paspoort {
+    margin-bottom: 10rem;
+}
+
+.paspoort h3 {
+    font-family: amplify;
+    font-weight: 200;
+    font-size: 2.2em;
+    color: var(--clr-secundary);
+    margin-bottom: .5rem;
+    margin-left: .8rem;
+}
+
+.paspoort p {
+    font-family: roboto;
+    font-weight: 200;
+    margin-bottom: .5rem;
+    margin-left: .8rem;
+}
