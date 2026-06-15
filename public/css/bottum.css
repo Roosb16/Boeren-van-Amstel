@@ -45,3 +45,11 @@ nav p {
     margin: .2em;
     order: -1;
 }
+
+.onderdelen-footer a.active p {
+    color: yellow;
+}
+
+.onderdelen-footer a.active svg {
+    fill: yellow;
+}
