@@ -1,3 +1,6 @@
+// Bovenaan je script, vóór de grenzen/kaart etc.
+let quizTimer = null;
+
 // 1. Grenzen van het Amstelgebied
 const grenzen = [[52.26, 4.85], [52.36, 5.05]];
 
@@ -267,6 +270,14 @@ function openLocatiePanel(loc) {
         b.classList.remove('correct', 'fout');
       });
       btn.classList.add(index === loc.quiz.correct ? 'correct' : 'fout');
+
+      if (quizTimer) clearTimeout(quizTimer);
+      quizTimer = setTimeout(function () {
+        document.querySelectorAll('[data-veld="quiz-antwoorden"] button').forEach(function (b) {
+          b.classList.remove('correct', 'fout');
+        });
+        quizTimer = null;
+      }, 2000);
     });
     quizAntwoorden.appendChild(btn);
   });
