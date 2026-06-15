@@ -1,0 +1,63 @@
+.zoekbalk {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    background: white;
+    border-bottom: 1px solid #e0e0e0;
+}
+  
+.zoekbalk svg {
+    flex-shrink: 0;
+    fill: #888;
+}
+  
+.zoekbalk input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    background: transparent;
+}
+  
+.zoek-resultaten {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-top: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    z-index: 1000;
+    max-height: 15rem;
+    overflow-y: auto;
+}
+  
+.zoek-resultaten li {
+    padding: 0.75rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+
+    font-family: roboto;
+}
+  
+.zoek-resultaten li span {
+    font-size: 0.8rem;
+    color: #888;
+    text-transform: capitalize;
+
+    font-family: roboto;
+}
+  
+.zoek-resultaten li.geen-resultaat {
+    color: #888;
+}
+  
+.zoek-resultaten li.geen-resultaat:hover {
+    background: var(--clr-background);
+}

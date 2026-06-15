@@ -4,11 +4,20 @@
 <head>
     <%- include('partials/head') %>
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="/css/zoekbalk.css">
 </head>
 
 <body>
     <header>
         <%- include('partials/header-nav') %>
+        <div class="zoekbalk">
+            <svg width="20" height="20" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M29.41 27.59L22.68 20.86A11 11 0 1 0 20.86 22.68L27.59 29.41ZM5 14A9 9 0 1 1 14 23 9 9 0 0 1 5 14Z"/>
+            </svg>
+            <input type="search" id="zoekInput" placeholder="Waar ben je naar opzoek?" autocomplete="off">
+            <ul id="zoekResultaten" class="zoek-resultaten" hidden></ul>
+          </div>
+          
     </header>
     <main>
         <div class="filter-instellingen">
@@ -47,6 +56,6 @@
 <script src="/js/main.js"></script>
 <script src="/js/agenda.js"></script>
 <script src="/js/bottum-nav.js"></script>
-<!-- <script src="/js/route-pagina.js"></script> -->
+<script src="/js/zoekbalk.js"></script>
 
 </html>

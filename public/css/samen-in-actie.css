@@ -45,6 +45,11 @@ h2 {
     margin-bottom: 3em;
 }
 
+.inhoud-kaartje p {
+    color: var(--clr-basic);
+    margin-bottom: .3em;
+}
+
 .inhoud-kaartje img {
     z-index: 1;
     border-radius: 10px;
