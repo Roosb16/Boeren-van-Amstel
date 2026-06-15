@@ -65,7 +65,7 @@
 }
 
 .start a{
-    text-decoration: underline;
+    text-decoration: none;
     font-family: 'roboto';
     font-size: 1.2rem;
     color: var(--clr-basic);
@@ -75,6 +75,7 @@
 
 .start a:nth-of-type(2) {
     color: var(--clr-primary);
+    text-decoration: underline;
 }
 
 /* onboarding slider */
