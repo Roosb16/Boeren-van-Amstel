@@ -6,7 +6,6 @@ const grenzen = [[52.26, 4.85], [52.36, 5.05]];
 
 // 2. Kaart initialiseren
 const kaart = L.map('kaart', {
-  minZoom: 13,
   maxZoom: 17,
   maxBounds: grenzen,
   maxBoundsViscosity: 1.0
@@ -14,7 +13,18 @@ const kaart = L.map('kaart', {
 
 // 3. Eigen afbeelding als achtergrond
 L.imageOverlay('/img/amstel-kaart.jpg', grenzen).addTo(kaart);
-kaart.fitBounds(grenzen, { padding: [0, 0] });
+
+// 3b. Minimale zoom aanpassen op basis van schermbreedte (voorkomt grijze randen)
+function stelMinZoomIn() {
+  const minZoomGewenst = window.innerWidth >= 850 ? 14 : 13;
+  kaart.setMinZoom(minZoomGewenst);
+  if (kaart.getZoom() < minZoomGewenst) {
+    kaart.setZoom(minZoomGewenst);
+  }
+}
+
+stelMinZoomIn();
+window.addEventListener('resize', stelMinZoomIn);
 
 // 4. Iconen per type locatie
 const iconen = {
@@ -70,7 +80,7 @@ const locaties = [
     themas: ["Weidevogels", "Duurzame landbouw"],
     activiteiten: ["Rondleidingen"],
     producten: ["Kaas", "Melk"],
-    coords: [52.320, 4.946],
+    coords: [52.323, 4.946],
     beschrijving: "Op boerderij Polderzicht werken boer en natuur samen. Met aandacht voor biodiversiteit en weidevogels draagt de boerderij bij aan een groen en levendig Amstelland.",
     fotos: ["/img/boerderij-polderzicht.jpg", "/img/werpspel-polderzicht.jpg"],
     quiz: {
@@ -90,7 +100,7 @@ const locaties = [
     themas: ["Weidevogels", "Duurzame landbouw"],
     activiteiten: ["Rondleidingen"],
     producten: ["Kaas", "Melk"],
-    coords: [52.270, 4.915],
+    coords: [52.288, 4.920],
     beschrijving: "Op De Grazige Weide zorgt Vincent Post samen met zijn familie voor zo'n 60 melkkoeien. De boerderij staat voor duurzame landbouw, met aandacht voor biodiversiteit, gezonde graslanden en een goede balans tussen natuur en voedselproductie.",
     fotos: ["/img/boerderij-grazige-weide.png", "/img/boerderij-grazige-weide2.jpg"],
     quiz: {
@@ -110,7 +120,7 @@ const locaties = [
     themas: ["Weidevogels", "Duurzame landbouw"],
     activiteiten: ["Rondleidingen"],
     producten: ["Kaas", "Melk"],
-    coords: [52.313, 4.968],
+    coords: [52.317, 4.965],
     beschrijving: "Bas en Gerard Timmer geloven dat natuur en landbouw elkaar versterken. Op hun boerderij werken zij aan biodiversiteit, gezonde graslanden en een leefgebied voor weidevogels. Zo produceren ze voedsel met aandacht voor de natuur om hen heen.",
     fotos: ["/img/boerderij-vredebest.jpg", "/img/boerderij-vredebest2.jpg"],
     quiz: {
@@ -130,7 +140,7 @@ const locaties = [
     themas: ["Biodiversiteit"],
     activiteiten: ["Excursies"],
     producten: [],
-    coords: [52.316, 4.960],
+    coords: [52.319, 4.958],
     beschrijving: "Beklim Het Poldernest en geniet van een prachtig uitzicht over de Ronde Hoep. Vanaf de 18 meter hoge toren zie je het karakteristieke polderlandschap, de vele sloten en met een beetje geluk zelfs weidevogels in de verte.",
     fotos: ["/img/uitkijktoren.jpg", "/img/uitkijktoren2.jpg"],
     quiz: {
@@ -150,7 +160,7 @@ const locaties = [
     themas: ["Biodiversiteit"],
     activiteiten: ["Excursies"],
     producten: [],
-    coords: [52.278, 4.908],
+    coords: [52.293, 4.910],
     beschrijving: "De Sint-Urbanuskerk is een van de bekendste herkenningspunten van het Amstelland. Met haar opvallende toren steekt de kerk al meer dan 130 jaar boven het polderlandschap uit. Vanaf de Amstel is de kerk van verre te zien en vormt zij een bijzonder stukje geschiedenis midden in de natuur.",
     fotos: ["/img/kerk-urbanus.jpg", "/img/kerk-urbanus2.jpg"],
     quiz: {
@@ -170,7 +180,7 @@ const locaties = [
     themas: ["Biodiversiteit"],
     activiteiten: ["Excursies"],
     producten: [],
-    coords: [52.290, 4.920],
+    coords: [52.299, 4.923],
     beschrijving: "De pontjes van het Amstelland verbinden fiets- en wandelroutes aan beide kanten van de Amstel. Al jarenlang helpen ze bezoekers om het polderlandschap op een bijzondere manier te ontdekken, vanaf het water én vanaf de dijken.",
     fotos: ["/img/pontveer.jpg", "/img/pontveer2.png"],
     quiz: {
@@ -190,7 +200,7 @@ const locaties = [
     themas: ["Duurzame landbouw"],
     activiteiten: ["Proeverijen"],
     producten: ["Kaas"],
-    coords: [52.303, 4.976],
+    coords: [52.306, 4.976],
     beschrijving: "Restaurant met streekproducten uit het Amstelgebied.",
     fotos: ["/img/restaurant-voetangel.jpg", "/img/restaurant-voetangel2.png"],
     quiz: {
@@ -210,7 +220,7 @@ const locaties = [
     themas: ["Natuurherstel", "Weidevogels"],
     activiteiten: ["Excursies", "Vrijwilligerswerk"],
     producten: [],
-    coords: [52.298, 4.952],
+    coords: [52.305, 4.948],
     beschrijving: "De weidevogels worden beschermd en hier kunnen ze veilig broeden.",
     fotos: ["/img/grutto-nesten.jpg", "/img/grutto-nesten2.jpg"],
     quiz: {
@@ -331,3 +341,31 @@ if (sluitBtn) {
 document.addEventListener('keydown', function (e) {
   if (e.key === 'Escape') document.querySelector('.boeren-info').classList.remove('open');
 });
+
+// 10. Pop-up verschuiving op desktop
+const navEl = document.querySelector('nav');
+const kaartEl = document.getElementById('kaart');
+
+document.querySelectorAll('[data-popup]').forEach(link => {
+  link.addEventListener('click', () => {
+    if (navEl) navEl.classList.add('nav-verschoven');
+    if (kaartEl) kaartEl.classList.add('kaart-verschoven');
+  });
+});
+
+document.querySelectorAll('.sluit-popup').forEach(knop => {
+  knop.addEventListener('click', () => {
+    if (navEl) navEl.classList.remove('nav-verschoven');
+    if (kaartEl) kaartEl.classList.remove('kaart-verschoven');
+  });
+});
+
+// 11. Kaart herberekenen bij grootteverandering (na pop-up open/dicht)
+if (kaartEl) {
+  kaartEl.addEventListener('transitionend', function (e) {
+    if (e.propertyName === 'width') {
+      kaart.invalidateSize();
+      vulContainer();
+    }
+  });
+}

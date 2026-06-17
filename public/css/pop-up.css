@@ -1,6 +1,12 @@
+.hero {
+    background-color: var(--clr-secundary);
+    width: 100%;
+}
+
 .natuurherstel {
     position: relative;
     overflow-x: hidden;
+    background-color: var(--clr-background);
 }
 
 .natuurherstel section{
@@ -11,11 +17,11 @@
     position: relative;
     z-index: 1;
     padding: 1rem;
+    padding-top: 2rem;
     
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 2rem;
 }
 
 .kruis-natuurherstel svg {
@@ -23,30 +29,10 @@
     width: 50px;
 }
 
-.achtergrond1 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    z-index: 0;
-    margin-top: 0;
-
-    fill: var(--clr-secundary);
-}
-
-.achtergrond2 {
-    height: auto;
-    left: 0;
-    right: 0;
-    display: block;
-    margin-left: -1.3em;
-}
-
 .natuurherstel img {
-    position: relative;
-    z-index: -1;
     border-radius: .8rem;
+    width: 100%;
+    padding-top: 1rem;
 }
 
 .eerste-p {
@@ -86,22 +72,17 @@
 .koop {
     font-family: 'bjorn';
     font-size: 1rem;
-    font-weight: 400;
+    font-weight: 300;
     color: var(--clr-basic);
-    text-decoration: underline;
-    margin: .5rem 0;
+    margin: 0.5rem 0;
     background-color: var(--clr-primary);
     text-decoration: none;
-    width: 40vw;
-    height: 4vh;
-    position: relative;
-    margin-bottom: 3.5rem;
-
+    width: fit-content;
+    padding: .6rem 1.2rem;
     display: flex;
     justify-content: center;
     align-items: center;
-
-    border-radius: 20px;
+    border-radius: 3rem;
 }
 
 .boeren {
