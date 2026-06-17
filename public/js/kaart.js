@@ -38,6 +38,11 @@ const startpuntIcoon = L.divIcon({
   className: ''
 });
 
+// 3e. Tweede overlay -> bovenkerkerpolder
+const bovenkerkerpolder = L.imageOverlay('/img/amstel-kaart-bovenkerkerpolder.jpg', grenzen, {
+  interactive: false
+});
+
 stelMinZoomIn();
 window.addEventListener('resize', stelMinZoomIn);
 
@@ -51,8 +56,8 @@ const iconen = {
     className: ''
   }),
   horeca: L.divIcon({
-    html: '<img src="/img/restaurant.png" width="55" height="55">',
-    iconSize: [55, 55],
+    html: '<img src="/img/restaurant.png" width="35" height="35">',
+    iconSize: [35, 35],
     iconAnchor: [16, 32],
     popupAnchor: [0, -32],
     className: ''
@@ -354,15 +359,22 @@ function openRouteInfoPanel(punt) {
 // 8. Filter logica
 function updateMarkers() {
   const geselecteerd = [...document.querySelectorAll('input[name="filter"]:checked')]
-    .map(cb => cb.value);
-
-  const routeActief = geselecteerd.map(v => v.toLowerCase().trim()).includes('route');
+    .map(cb => cb.value.toLowerCase().trim());
 
   // Route overlay aan/uit
+  const routeActief = geselecteerd.includes('route');
   if (routeActief) {
     routeOverlay.addTo(kaart);
   } else {
     routeOverlay.remove();
+  }
+
+  // Bovenkerkerpolder overlay aan/uit
+  const bovenkerkerpolderActief = geselecteerd.includes('bovenkerkerpolder');
+  if (bovenkerkerpolderActief) {
+    bovenkerkerpolder.addTo(kaart);
+  } else {
+    bovenkerkerpolder.remove();
   }
 
   // Startpunt-markers aan/uit (samen met de route)
@@ -388,7 +400,7 @@ function updateMarkers() {
     ].map(v => v.toLowerCase().trim());
 
     const match = geselecteerd.some(filter =>
-      alleWaarden.includes(filter.toLowerCase().trim())
+      alleWaarden.includes(filter)
     );
 
     if (match) {
