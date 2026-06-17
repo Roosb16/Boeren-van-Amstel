@@ -101,3 +101,12 @@
     width: 100%;
     accent-color: var(--clr-secundary);
 }
+
+@media (min-width: 700px) {
+
+    .instellingen-panel {
+        left: auto;
+        width: min(90vw, 25rem);
+        z-index: 200;
+    }
+}

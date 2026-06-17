@@ -8,7 +8,6 @@ main {
     min-height: unset;
     display: grid;
     grid-template-rows: auto 1fr;
-    gap: 5rem 0;
 }
 
 .dekstop {
@@ -19,7 +18,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-bottom: 2rem;
+    padding-bottom: 8rem;
 }
 
 .inlogform section {

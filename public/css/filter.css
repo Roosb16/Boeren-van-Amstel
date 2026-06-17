@@ -141,8 +141,12 @@ svg{
     list-style: none;
     padding: 16px;
     margin: 0;
-    background: var(--clr-background);
+    background: var(--clr-overlay);
     border-radius: 12px;
+}
+
+.legenda img{
+    width: 2.5rem;
 }
 
 .legenda li {
@@ -172,7 +176,7 @@ svg{
 }
 
 .filter-accordion__header::after {
-    content: 'â–¼';
+    content: "▼";
     font-size: 0.75rem;
     transition: transform 0.4s ease;
 }
@@ -186,4 +190,10 @@ svg{
     display: flex;
     flex-direction: column;
     gap: 8px;
+}
+
+@media (min-width: 700px) {
+    .filter-panel.open{
+        width: 25rem;
+    }
 }
