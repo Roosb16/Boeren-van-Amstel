@@ -20,3 +20,25 @@ document.querySelectorAll('.sluit-popup').forEach(knop => {
     if (nav) nav.classList.remove('nav-verschoven');
   });
 });
+
+const footerLinks = document.querySelectorAll('.onderdelen-footer a');
+
+footerLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        footerLinks.forEach(item => item.classList.remove('active'));
+        link.classList.add('active');
+    });
+});
+
+document.querySelectorAll('.sluit-popup').forEach(knop => {
+  knop.addEventListener('click', () => {
+    const popup = knop.closest('.pop-up');
+    popup.setAttribute('aria-hidden', 'true');
+
+    // vind bijbehorende link en haal active weg
+    const id = popup.id;
+
+    const activeLink = document.querySelector(`[data-popup="${id}"]`);
+    if (activeLink) activeLink.classList.remove('active');
+  });
+});

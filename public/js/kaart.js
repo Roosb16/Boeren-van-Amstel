@@ -1,3 +1,6 @@
+// Bovenaan je script, vóór de grenzen/kaart etc.
+let quizTimer = null;
+
 // 1. Grenzen van het Amstelgebied
 const grenzen = [[52.26, 4.85], [52.36, 5.05]];
 
@@ -99,7 +102,7 @@ const locaties = [
     producten: ["Kaas", "Melk"],
     coords: [52.288, 4.920],
     beschrijving: "Op De Grazige Weide zorgt Vincent Post samen met zijn familie voor zo'n 60 melkkoeien. De boerderij staat voor duurzame landbouw, met aandacht voor biodiversiteit, gezonde graslanden en een goede balans tussen natuur en voedselproductie.",
-    fotos: [],
+    fotos: ["/img/boerderij-grazige-weide.png", "/img/boerderij-grazige-weide2.jpg"],
     quiz: {
       vraag: "Waarom zijn kruidenrijke graslanden belangrijk op De Grazige Weide?",
       antwoorden: [
@@ -119,7 +122,7 @@ const locaties = [
     producten: ["Kaas", "Melk"],
     coords: [52.317, 4.965],
     beschrijving: "Bas en Gerard Timmer geloven dat natuur en landbouw elkaar versterken. Op hun boerderij werken zij aan biodiversiteit, gezonde graslanden en een leefgebied voor weidevogels. Zo produceren ze voedsel met aandacht voor de natuur om hen heen.",
-    fotos: [],
+    fotos: ["/img/boerderij-vredebest.jpg", "/img/boerderij-vredebest2.jpg"],
     quiz: {
       vraag: "Waarom vinden Bas en Gerard de 'korte keten' zo belangrijk?",
       antwoorden: [
@@ -139,7 +142,7 @@ const locaties = [
     producten: [],
     coords: [52.319, 4.958],
     beschrijving: "Beklim Het Poldernest en geniet van een prachtig uitzicht over de Ronde Hoep. Vanaf de 18 meter hoge toren zie je het karakteristieke polderlandschap, de vele sloten en met een beetje geluk zelfs weidevogels in de verte.",
-    fotos: [],
+    fotos: ["/img/uitkijktoren.jpg", "/img/uitkijktoren2.jpg"],
     quiz: {
       vraag: "Waarom heet deze uitkijktoren Het Poldernest?",
       antwoorden: [
@@ -159,7 +162,7 @@ const locaties = [
     producten: [],
     coords: [52.293, 4.910],
     beschrijving: "De Sint-Urbanuskerk is een van de bekendste herkenningspunten van het Amstelland. Met haar opvallende toren steekt de kerk al meer dan 130 jaar boven het polderlandschap uit. Vanaf de Amstel is de kerk van verre te zien en vormt zij een bijzonder stukje geschiedenis midden in de natuur.",
-    fotos: [],
+    fotos: ["/img/kerk-urbanus.jpg", "/img/kerk-urbanus2.jpg"],
     quiz: {
       vraag: "Hoeveel Urbanuskerken zijn er in het Amstelland?",
       antwoorden: [
@@ -179,7 +182,7 @@ const locaties = [
     producten: [],
     coords: [52.299, 4.923],
     beschrijving: "De pontjes van het Amstelland verbinden fiets- en wandelroutes aan beide kanten van de Amstel. Al jarenlang helpen ze bezoekers om het polderlandschap op een bijzondere manier te ontdekken, vanaf het water én vanaf de dijken.",
-    fotos: [],
+    fotos: ["/img/pontveer.jpg", "/img/pontveer2.png"],
     quiz: {
       vraag: "Hoe steken de meeste pontjes in het Amstelland de rivier over?",
       antwoorden: [
@@ -199,7 +202,7 @@ const locaties = [
     producten: ["Kaas"],
     coords: [52.306, 4.976],
     beschrijving: "Restaurant met streekproducten uit het Amstelgebied.",
-    fotos: [],
+    fotos: ["/img/restaurant-voetangel.jpg", "/img/restaurant-voetangel2.png"],
     quiz: {
       vraag: "Wat serveert De Voetangel?",
       antwoorden: [
@@ -219,7 +222,7 @@ const locaties = [
     producten: [],
     coords: [52.305, 4.948],
     beschrijving: "De weidevogels worden beschermd en hier kunnen ze veilig broeden.",
-    fotos: [],
+    fotos: ["/img/grutto-nesten.jpg", "/img/grutto-nesten2.jpg"],
     quiz: {
       vraag: "Waarom is dit gebied belangrijk?",
       antwoorden: [
@@ -277,6 +280,14 @@ function openLocatiePanel(loc) {
         b.classList.remove('correct', 'fout');
       });
       btn.classList.add(index === loc.quiz.correct ? 'correct' : 'fout');
+
+      if (quizTimer) clearTimeout(quizTimer);
+      quizTimer = setTimeout(function () {
+        document.querySelectorAll('[data-veld="quiz-antwoorden"] button').forEach(function (b) {
+          b.classList.remove('correct', 'fout');
+        });
+        quizTimer = null;
+      }, 2000);
     });
     quizAntwoorden.appendChild(btn);
   });

@@ -46,6 +46,14 @@ nav p {
     order: -1;
 }
 
+.onderdelen-footer a.active p {
+    color: yellow;
+}
+
+.onderdelen-footer a.active svg {
+    fill: yellow;
+}
+
 /* desktop */
 @media (min-width: 700px) {
     nav {
