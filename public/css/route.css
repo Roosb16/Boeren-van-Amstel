@@ -190,7 +190,9 @@
 }
 
 .paspoort {
-    margin-bottom: 10rem;
+    margin-bottom: 8rem;
+    display: flex;
+    flex-direction: column;
 }
 
 .paspoort h3 {
@@ -207,4 +209,14 @@
     font-weight: 200;
     margin-bottom: .5rem;
     margin-left: .8rem;
+}
+
+.blauw-tekst {
+    color: var(--clr-secundary);
+    font-weight: 500;
+}
+
+.paspoort-img {
+    align-self: center;
+    padding: 1rem;
 }
