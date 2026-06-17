@@ -207,14 +207,14 @@ p{
 
 /* ===== ROUTE INFO PANEL ===== */
 .route-info {
-    position: fixed;
+    position: fixed;    
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(0.95);
     width: min(90vw, 24rem);
     max-height: 80vh;
     overflow-y: auto;
-    background-color: #d9e8ec;
+    background-color: var(--clr-background);
     border-radius: 1.5rem;
     padding: 1.5rem;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.25);
@@ -224,6 +224,8 @@ p{
     visibility: hidden;
     pointer-events: none;
     transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+    overflow-y: auto;
+    overflow-x: hidden;
   }
   
   .route-info.open {
@@ -233,33 +235,36 @@ p{
     transform: translate(-50%, -50%) scale(1);
   }
   
-  .sluit-route-info {
+.sluit-route-info {
     position: absolute;
-    top: 1rem;
-    right: 1rem;
+    top: .4rem;
+    right: -1.8rem; /* was 1rem, kleiner = meer naar rechts */
     background: none;
     border: none;
     cursor: pointer;
     color: #1c3f6e;
-  }
+}
   
+.kruisje-route {
+    fill: var(--clr-primary);
+    margin-left: .5em;
+}
+
   .route-info__titel {
     display: flex;
     align-items: center;
     gap: 0.75rem;
     margin-bottom: 1.5rem;
-    padding-right: 2rem;
   }
   
   .route-info__icoon-titel {
     flex-shrink: 0;
-    color: #1c3f6e;
+    color: var(--clr-primary);
   }
   
   .route-info__titel h2 {
     font-size: 1.5rem;
-    color: #1c3f6e;
-    margin: 0;
+    color: var(--clr-primary);
   }
   
   .route-info__details {
@@ -282,9 +287,14 @@ p{
   }
   
   .route-info__label {
-    font-weight: 600;
+    font-weight: 500;
     color: #1c3f6e;
+    font-family: roboto;
   }
+
+.button-route {
+    margin-left: 9.5rem;
+}
 
 @media (min-width: 700px) {
     #kaart {
