@@ -23,6 +23,21 @@ function stelMinZoomIn() {
   }
 }
 
+// 3c. Route overlay (afbeelding even groot als de kaart-achtergrond, standaard uit)
+const routeOverlay = L.imageOverlay('/img/route-overlay.png', grenzen, {
+  opacity: 0.9,
+  interactive: false
+});
+
+// 3d. Vlag-icoon voor route-startpunten
+const startpuntIcoon = L.divIcon({
+  html: '<img src="/img/startpunt.png" width="40" height="40">',
+  iconSize: [40, 40],
+  iconAnchor: [12, 36],
+  popupAnchor: [0, -36],
+  className: ''
+});
+
 stelMinZoomIn();
 window.addEventListener('resize', stelMinZoomIn);
 
@@ -236,6 +251,19 @@ const locaties = [
   }
 ];
 
+// 5b. Startpunten van de route
+const startpunten = [
+  {
+    naam: "Fietsroute De Ronde Hoep",
+    coords: [52.300, 4.935],
+    afstand: "16 km",
+    thema: "vogels, natuur",
+    duur: "60 min",
+    knooppunten: "9"
+  }
+  // later: meer startpunten hier toevoegen
+];
+
 // 6. Markers aanmaken en opslaan
 const markerLijst = [];
 
@@ -248,6 +276,19 @@ locaties.forEach(loc => {
   });
 
   markerLijst.push({ marker, loc });
+});
+
+// 6b. Startpunt-markers aanmaken (verborgen totdat route-filter actief is)
+const startpuntMarkerLijst = [];
+
+startpunten.forEach(punt => {
+  const marker = L.marker(punt.coords, { icon: startpuntIcoon });
+
+  marker.on('click', function () {
+    openRouteInfoPanel(punt);
+  });
+
+  startpuntMarkerLijst.push(marker);
 });
 
 // 7. Locatie panel openen en vullen
@@ -295,10 +336,43 @@ function openLocatiePanel(loc) {
   panel.classList.add('open');
 }
 
+// 7b. Route-info panel openen en vullen
+function openRouteInfoPanel(punt) {
+  const panel = document.querySelector('.route-info');
+  if (!panel) return;
+
+  panel.querySelector('[data-veld="naam"]').textContent = punt.naam;
+  panel.querySelector('[data-veld="afstand"]').textContent = punt.afstand;
+  panel.querySelector('[data-veld="thema"]').textContent = punt.thema;
+  panel.querySelector('[data-veld="duur"]').textContent = punt.duur;
+  panel.querySelector('[data-veld="knooppunten"]').textContent = punt.knooppunten;
+
+  panel.setAttribute('aria-hidden', 'false');
+  panel.classList.add('open');
+}
+
 // 8. Filter logica
 function updateMarkers() {
   const geselecteerd = [...document.querySelectorAll('input[name="filter"]:checked')]
     .map(cb => cb.value);
+
+  const routeActief = geselecteerd.map(v => v.toLowerCase().trim()).includes('route');
+
+  // Route overlay aan/uit
+  if (routeActief) {
+    routeOverlay.addTo(kaart);
+  } else {
+    routeOverlay.remove();
+  }
+
+  // Startpunt-markers aan/uit (samen met de route)
+  startpuntMarkerLijst.forEach(marker => {
+    if (routeActief) {
+      marker.addTo(kaart);
+    } else {
+      marker.remove();
+    }
+  });
 
   markerLijst.forEach(({ marker, loc }) => {
     if (geselecteerd.length === 0) {
@@ -339,8 +413,28 @@ if (sluitBtn) {
 }
 
 document.addEventListener('keydown', function (e) {
-  if (e.key === 'Escape') document.querySelector('.boeren-info').classList.remove('open');
+  if (e.key === 'Escape') {
+    document.querySelector('.boeren-info').classList.remove('open');
+
+    const routePanel = document.querySelector('.route-info');
+    if (routePanel) {
+      routePanel.classList.remove('open');
+      routePanel.setAttribute('aria-hidden', 'true');
+    }
+  }
 });
+
+// 9b. Route-info panel sluiten
+const sluitRouteInfoBtn = document.querySelector('.sluit-route-info');
+
+if (sluitRouteInfoBtn) {
+  sluitRouteInfoBtn.addEventListener('click', function () {
+    const panel = document.querySelector('.route-info');
+    sluitRouteInfoBtn.blur(); // focus eerst weghalen
+    panel.classList.remove('open');
+    panel.setAttribute('aria-hidden', 'true');
+  });
+}
 
 // 10. Pop-up verschuiving op desktop
 const navEl = document.querySelector('nav');
