@@ -1,4 +1,8 @@
 /* Algemene styling */
+main{
+    margin-bottom: 5em;
+}
+
 .zonder-achtergrond{
     margin: 2rem 1.5rem;
     gap: 3rem;

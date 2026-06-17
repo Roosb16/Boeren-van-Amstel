@@ -25,15 +25,14 @@ h2 {
 
 .birb {
     position: absolute;
-    margin-left: 10em;
     margin-top: -1.5em;
-    width: 80px;
+    width: 100%;
 }
 
 .inhoud-kaartje {
     background-color: var(--clr-secundary);
     color: var(--clr-basic);
-    width: 95vw;
+    width: 95%;
     border-radius: 10px;
     display: flex;
     flex-direction: column;

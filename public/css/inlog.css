@@ -1,14 +1,18 @@
 body {
     min-height: 100dvh;
     display: grid;
-    grid-template-rows: .8fr auto;
+    grid-template-rows: 1fr auto;
 }
 
 main {
     min-height: unset;
     display: grid;
-    grid-template-rows: 1fr auto;
-    gap: 1rem 0;
+    grid-template-rows: auto 1fr;
+    gap: 5rem 0;
+}
+
+.dekstop {
+    display: none;
 }
 
 .inlogform {
@@ -26,7 +30,7 @@ main {
 }
 
 .inlogform section > img:first-child {
-    width: 8rem;
+    width: 10rem;
 }
 
 input[type="email"],
@@ -110,4 +114,25 @@ a{
     font-family: roboto;
     font-weight: 300;
     font-size: 0.9rem;
+}
+
+@media (min-width: 700px) {
+
+    main {
+        gap: 1rem 0;
+        margin-top: 5rem;
+    }
+
+    .inlogform section > img:first-child {
+        width: 15rem;
+    }
+
+    .mobiel {
+        display: none;
+    }
+    .dekstop {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
 }
