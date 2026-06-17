@@ -36,7 +36,7 @@ const iconen = {
     className: ''
   }),
   horeca: L.divIcon({
-    html: '<img src="/img/bedrijf.png" width="55" height="55">',
+    html: '<img src="/img/restaurant.png" width="55" height="55">',
     iconSize: [55, 55],
     iconAnchor: [16, 32],
     popupAnchor: [0, -32],
@@ -200,7 +200,7 @@ const locaties = [
     themas: ["Duurzame landbouw"],
     activiteiten: ["Proeverijen"],
     producten: ["Kaas"],
-    coords: [52.306, 4.976],
+    coords: [52.312, 4.970],
     beschrijving: "Restaurant met streekproducten uit het Amstelgebied.",
     fotos: ["/img/restaurant-voetangel.jpg", "/img/restaurant-voetangel2.png"],
     quiz: {
