@@ -27,7 +27,7 @@
                         <%= gebruiker.naam %>
                     </h2>
                     <p>Lid sinds: 21 april 2026</p>
-                    <img src="/img/profiel-mockup.png" alt="Jouw profiel pagina">
+                    <img class="profielfoto" src="/img/profiel-foto.png" alt="Jouw profiel pagina">
                 </section>
             </div>
         </div>
@@ -61,15 +61,24 @@
             <svg viewBox="0 0 393 752" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M393 744.903C393 744.903 334 767.381 197 732.332C60 697.283 0 744.903 0 744.903V28.6287C0 28.6287 100 -30.5336 214 21.2388C328 73.0113 393 14.7515 393 14.7515V744.903Z" fill="#1686CE"/>
             </svg>
-            <section class="polder-album">
-                <h2>Polder album</h2>
-                <p>Bewaar hier jouw mooiste herinneringen uit het Amstelland. Upload foto's van bijzondere ontmoetingen, mooie uitzichten en plekken die je tijdens je routes hebt ontdekt.</p>
-                <img src="/img/bloem.png" alt="">
-                <img src="/img/grutto-img.png" alt="">
-                <img src="/img/weiland.png" alt="">
-                <input type="image">
-                <button>Bekijk ze allemaal</button>
-            </section>
+           <section class="polder-album">
+    <h2>Polder album</h2>
+    <p>Bewaar hier jouw mooiste herinneringen uit het Amstelland. Upload foto's van bijzondere ontmoetingen, mooie uitzichten en plekken die je tijdens je routes hebt ontdekt.</p>
+    <img src="/img/bloem.png" alt="">
+    <img src="/img/grutto-img.png" alt="">
+    <img src="/img/weiland.png" alt="">
+
+    <div class="upload-tile" id="uploadTile">
+        <input type="file" id="fileInput" accept="image/*" hidden>
+        <svg class="upload-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9a2 2 0 0 1 2-2h2.2l1.1-1.7A1.8 1.8 0 0 1 9.8 4.5h4.4a1.8 1.8 0 0 1 1.5.8L16.8 7H19a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9z"/>
+            <circle cx="12" cy="13" r="3.3"/>
+        </svg>
+        <button type="button" class="remove-btn" id="removeBtn" aria-label="Verwijder foto">×</button>
+    </div>
+
+    <button>Bekijk ze allemaal</button>
+</section>
         </div>
 
         <div class="zonder-achtergrond">
@@ -118,6 +127,7 @@
     <footer>
         <%- include('partials/bottum-nav') %>
     </footer>
+    <script src="/js/polder-album.js"></script>
 </body>
 
 </html>

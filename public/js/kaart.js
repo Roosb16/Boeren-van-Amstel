@@ -43,6 +43,10 @@ const bovenkerkerpolder = L.imageOverlay('/img/amstel-kaart-bovenkerkerpolder.jp
   interactive: false
 });
 
+const duivendrechtschepolder = L.imageOverlay('/img/amstel-kaart-duivendrechtsche-polder.jpg', grenzen, {
+  interactive: false
+});
+
 stelMinZoomIn();
 window.addEventListener('resize', stelMinZoomIn);
 
@@ -400,6 +404,13 @@ function updateMarkers() {
     bovenkerkerpolder.addTo(kaart);
   } else {
     bovenkerkerpolder.remove();
+  }
+
+    const duivendrechtscheActief = geselecteerd.includes('duivendrechtsche-polder');
+  if (duivendrechtscheActief) {
+    duivendrechtschepolder.addTo(kaart);
+  } else {
+    duivendrechtschepolder.remove();
   }
 
   // Startpunt-markers aan/uit (samen met de route)

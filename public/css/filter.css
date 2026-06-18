@@ -149,6 +149,10 @@ svg{
     width: 2.5rem;
 }
 
+.water {
+    border-radius: .5rem;
+}
+
 .legenda li {
     display: flex;
     align-items: center;
