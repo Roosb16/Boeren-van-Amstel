@@ -260,13 +260,38 @@ const locaties = [
 const startpunten = [
   {
     naam: "Fietsroute De Ronde Hoep",
-    coords: [52.300, 4.935],
+    coords: [52.284, 4.951],
+    afstand: "16 km",
+    thema: "vogels, natuur",
+    duur: "60 min",
+    knooppunten: "9"
+  },
+  // later: meer startpunten hier toevoegen
+  
+  {
+    naam: "Fietsroute De Ronde Hoep",
+    coords: [52.311, 4.972],
+    afstand: "16 km",
+    thema: "vogels, natuur",
+    duur: "60 min",
+    knooppunten: "9"
+  },
+  {
+    naam: "Fietsroute De Ronde Hoep",
+    coords: [52.300, 4.924],
+    afstand: "16 km",
+    thema: "vogels, natuur",
+    duur: "60 min",
+    knooppunten: "9"
+  },
+  {
+    naam: "Fietsroute De Ronde Hoep",
+    coords: [52.3195, 4.958],
     afstand: "16 km",
     thema: "vogels, natuur",
     duur: "60 min",
     knooppunten: "9"
   }
-  // later: meer startpunten hier toevoegen
 ];
 
 // 6. Markers aanmaken en opslaan
